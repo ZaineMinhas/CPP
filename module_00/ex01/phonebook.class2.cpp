@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/17 17:21:08 by zminhas           #+#    #+#             */
-/*   Updated: 2022/03/17 21:18:52 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/03/18 15:31:08 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,10 @@ void	PhoneBook::add_contact(void)
 	this->contact[nb_add].secret = PhoneBook::get_info("darkest secret: ");
 }
 
+void	PhoneBook::print_info(const std::string info)
+{
+}
+
 void	PhoneBook::search_contact(void)
 {
 	int	id;
@@ -46,10 +50,14 @@ void	PhoneBook::search_contact(void)
 		std::cout << "Error" << std::endl;
 	else
 	{
-		std::cout << "first name: " << contact[id].f_name << std::endl;
+		std::cout << "|     index|first name| last name|  nickname|" << std::endl;
+		std::cout << "         " << contact[id].id << "|";
+		
+		std::cout << std::endl;
+		/*std::cout << "first name: " << contact[id].f_name << std::endl;
 		std::cout << "last name: " << contact[id].l_name << std::endl;
 		std::cout << "nickname: " << contact[id].n_name << std::endl;
 		std::cout << "phone number: " << contact[id].phone_nb << std::endl;
-		std::cout << "darkest secret: " << contact[id].secret << std::endl;
+		std::cout << "darkest secret: " << contact[id].secret << std::endl;*/
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/17 16:01:43 by zminhas           #+#    #+#             */
-/*   Updated: 2022/03/17 20:35:15 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/03/18 15:30:36 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ class PhoneBook
 
 		void		add_contact(void);
 		void		search_contact(void);
+		void		print_info(const std::string info);
 		std::string	get_info(std::string info);
 
 	private:
