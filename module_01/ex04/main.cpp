@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanB.cpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/20 14:37:21 by zminhas           #+#    #+#             */
-/*   Updated: 2022/03/20 16:42:14 by zminhas          ###   ########.fr       */
+/*   Created: 2022/03/20 15:39:10 by zminhas           #+#    #+#             */
+/*   Updated: 2022/03/20 17:14:56 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "HumanB.hpp"
+#include "Replace.hpp"
 
-HumanB::HumanB(std::string h_name) : _name(h_name) {}
-
-HumanB::~HumanB() {}
-
-void	HumanB::attack(void)
+int	retrun_error()
 {
-	std::cout << _name << " attacks with their " << this->_weapon->getType() << std::endl;
+	std::cout << "Error" << std::endl;
+	return (1);
 }
 
-void	HumanB::setWeapon(Weapon weapon)
+int	main(int ac, char **av)
 {
-	this->_weapon = &weapon;
+	if (ac != 4)
+		return (retrun_error());
+	Replace	replace(av[1], av[2], av[3]);
+	if (replace.replace())
+		return (retrun_error());
+    return (0);
 }

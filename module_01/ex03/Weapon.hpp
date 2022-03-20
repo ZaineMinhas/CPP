@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/19 18:19:04 by zminhas           #+#    #+#             */
-/*   Updated: 2022/03/19 18:39:18 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/03/20 16:41:01 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@
 class Weapon
 {
 private:
-	std::string	type;
+	std::string	_type;
 
 public:
-	Weapon();
+	Weapon(std::string w_name);
 	~Weapon();
 
 	const std::string	&getType();

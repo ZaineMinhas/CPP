@@ -1,27 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanB.cpp                                         :+:      :+:    :+:   */
+/*   Replace.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/20 14:37:21 by zminhas           #+#    #+#             */
-/*   Updated: 2022/03/20 16:42:14 by zminhas          ###   ########.fr       */
+/*   Created: 2022/03/20 15:39:36 by zminhas           #+#    #+#             */
+/*   Updated: 2022/03/20 17:07:33 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "HumanB.hpp"
+#ifndef REPLACE_HPP
+# define REPLACE_HPP
 
-HumanB::HumanB(std::string h_name) : _name(h_name) {}
+# include <iostream>
+# include <fstream>
+# include <string>
 
-HumanB::~HumanB() {}
-
-void	HumanB::attack(void)
+class Replace
 {
-	std::cout << _name << " attacks with their " << this->_weapon->getType() << std::endl;
-}
+private:
+	std::string	_filename;
+	std::string	_s1;
+	std::string	_s2;
 
-void	HumanB::setWeapon(Weapon weapon)
-{
-	this->_weapon = &weapon;
-}
+	int	_check_args(std::string file, std::string s1, std::string s2);
+
+
+public:
+    Replace(std::string filename, std::string s1, std::string s2);
+    ~Replace();
+
+	int	replace(void);
+};
+
+#endif
