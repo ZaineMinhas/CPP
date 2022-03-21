@@ -6,21 +6,31 @@
 #    By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/15 17:42:16 by zminhas           #+#    #+#              #
-#    Updated: 2022/03/15 18:02:29 by zminhas          ###   ########.fr        #
+#    Updated: 2022/03/21 18:57:46 by zminhas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= megaphone
+CC = 		c++
 
-$(NAME):
-			@c++ -Wall -Werror -Wextra megaphone.cpp
-			@mv a.out $(NAME)
+CFLAGS =	-Wall -Wextra -Werror -std=c++98
 
-all:		$(NAME)
+NAME =		megaphone
 
-fclean:		
-			@rm $(NAME)
+SRCS =		megaphone.cpp
 
-re:		fclean all
+OBJS =		$(SRCS:.cpp=.o)
 
-.PHONY:	all fclean re
+all : 		$(NAME)
+
+$(NAME):	$(OBJS)
+			$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
+
+clean:
+			rm -f $(OBJS) $(OB)
+
+fclean: 	clean
+			rm -f $(NAME) $(OB)
+
+re: 		fclean all
+
+.PHONY:		all clean fclean re
