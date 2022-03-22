@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/22 14:48:52 by zminhas           #+#    #+#             */
-/*   Updated: 2022/03/22 18:40:19 by zminhas          ###   ########.fr       */
+/*   Created: 2022/03/22 18:43:18 by zminhas           #+#    #+#             */
+/*   Updated: 2022/03/22 19:30:13 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,16 @@
 
 Fixed::Fixed() : _nb(0) {
 	std::cout << "Default constructor called" << std::endl;
+}
+
+Fixed::Fixed(int const n) {
+	std::cout << "Int constructor called" << std::endl;
+	this->_nb = n << _bits;
+}
+
+Fixed::Fixed(float const f) {
+	std::cout << "Float constructor called" << std::endl;
+	this->_nb = roundf(f * (1 << _bits));
 }
 
 Fixed::Fixed(Fixed const  &src) {
@@ -26,13 +36,19 @@ Fixed::~Fixed() {
 }
 
 int		Fixed::getRawBits(void) const {
-	std::cout << "getRawBits member function called" << std::endl;
 	return (this->_nb);
 }
 
 void	Fixed::setRawBits(int const raw) {
-	std::cout << "setRawBits member function called" << std::endl;
 	this->_nb = raw;
+}
+
+int		Fixed::toInt(void) const {
+	return (_nb >> _bits);
+}
+
+float	Fixed::toFloat(void) const {
+	return ((float)_nb / (1 << _bits));
 }
 
 Fixed &	 Fixed::operator=(Fixed const & rhs)
@@ -41,4 +57,9 @@ Fixed &	 Fixed::operator=(Fixed const & rhs)
 	if (this != &rhs)
 		this->_nb = rhs.getRawBits();
 	return (*this);
+}
+
+std::ostream &	operator<<(std::ostream &o, Fixed const &rhs) {
+	o << rhs.toFloat();
+	return (o);
 }

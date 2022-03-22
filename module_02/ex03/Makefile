@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/03/22 14:46:16 by zminhas           #+#    #+#              #
-#    Updated: 2022/03/22 18:28:34 by zminhas          ###   ########.fr        #
+#    Created: 2022/03/22 20:30:43 by zminhas           #+#    #+#              #
+#    Updated: 2022/03/22 20:30:45 by zminhas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,8 +16,9 @@ CFLAGS =	-Wall -Wextra -Werror -std=c++98
 
 NAME =		fixed
 
-SRCS =		main.cpp	\
-			Fixed.cpp	\
+SRCS =		main.cpp			\
+			Fixed.cpp			\
+			Fixed_operator.cpp	\
 
 OBJS =		$(SRCS:.cpp=.o)
 

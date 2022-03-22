@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 16:42:39 by zminhas           #+#    #+#             */
-/*   Updated: 2022/03/21 18:19:44 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/03/22 18:18:17 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ int	Account::_totalNbWithdrawals = 0;
 
 Account::Account( int initial_deposit )
 {
-	this->_accountIndex = this->_nbAccounts; /* a tester*/
-	this->_nbAccounts++;
+	this->_accountIndex = _nbAccounts;
+	_nbAccounts++;
 	this->_amount = initial_deposit;
-	this->_totalAmount += this->_amount;
+	_totalAmount += _amount;
 	this->_nbDeposits = 0;
 	this->_nbWithdrawals = 0;
 	_displayTimestamp();

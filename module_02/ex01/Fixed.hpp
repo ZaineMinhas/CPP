@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/22 14:47:22 by zminhas           #+#    #+#             */
-/*   Updated: 2022/03/22 18:43:09 by zminhas          ###   ########.fr       */
+/*   Created: 2022/03/22 18:43:02 by zminhas           #+#    #+#             */
+/*   Updated: 2022/03/22 19:22:56 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <iostream>
 # include <string>
+# include <cmath>
 
 class Fixed
 {
@@ -24,13 +25,20 @@ private:
 
 public:
 	Fixed();
+	Fixed(int const n);
+	Fixed(float const f);
 	Fixed(Fixed const  &src);
 	~Fixed();
 
+	int			toInt(void) const;
+	float		toFloat(void) const;
 	int			getRawBits(void) const;
 	void		setRawBits(int const raw);
 
 	Fixed &		operator=(Fixed const & rhs);
+	Fixed &		operator<<(Fixed const & rhs);
 };
+
+std::ostream &	operator<<(std::ostream &o, Fixed const &rhs);
 
 #endif

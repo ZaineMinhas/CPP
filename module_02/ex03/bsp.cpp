@@ -1,27 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   bsp.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/22 15:12:43 by zminhas           #+#    #+#             */
-/*   Updated: 2022/03/22 19:03:46 by zminhas          ###   ########.fr       */
+/*   Created: 2022/03/22 20:40:41 by zminhas           #+#    #+#             */
+/*   Updated: 2022/03/22 20:44:36 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
-
-int main(void)
-{
-	Fixed a;
-	Fixed b( a );
-	Fixed c;
-
-	c = b;
-
-	std::cout << a.getRawBits() << std::endl;
-	std::cout << b.getRawBits() << std::endl;
-	std::cout << c.getRawBits() << std::endl;
-	return (0);
-}

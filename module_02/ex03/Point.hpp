@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Point.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/22 15:12:43 by zminhas           #+#    #+#             */
-/*   Updated: 2022/03/22 19:03:46 by zminhas          ###   ########.fr       */
+/*   Created: 2022/03/22 20:41:01 by zminhas           #+#    #+#             */
+/*   Updated: 2022/03/22 20:43:59 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#ifndef POINT_HPP
+# define POINT_HPP
 
-int main(void)
+# include <iostream>
+# include <string>
+
+class Point
 {
-	Fixed a;
-	Fixed b( a );
-	Fixed c;
+private:
 
-	c = b;
+public:
+    Point();
+    ~Point();
+};
 
-	std::cout << a.getRawBits() << std::endl;
-	std::cout << b.getRawBits() << std::endl;
-	std::cout << c.getRawBits() << std::endl;
-	return (0);
-}
+#endif
