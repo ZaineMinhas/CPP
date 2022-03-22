@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 19:51:11 by zminhas           #+#    #+#             */
-/*   Updated: 2022/03/21 20:13:25 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/03/22 17:02:30 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,19 @@ void	Karen::complain(std::string level)
 
 	for (int i = 0; i < 4; i++)
 		if (check[i] == level)
-			while (i < 4)
+			switch (i)
 			{
-				(this->*(fc_tab[i]))();
-				i++;
+				case (0):
+					debug();
+				case (1):
+					info();
+				case (2):
+					warning();
+				case (3):
+					error();
+					break;
+				default:
+					std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
+					break;
 			}
 }
