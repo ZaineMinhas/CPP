@@ -6,11 +6,11 @@
 #    By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/17 16:00:44 by zminhas           #+#    #+#              #
-#    Updated: 2022/03/21 19:05:11 by zminhas          ###   ########.fr        #
+#    Updated: 2022/03/22 17:27:37 by zminhas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC = 		c++
+CXX = 		c++
 
 CFLAGS =	-Wall -Wextra -Werror -std=c++98
 
@@ -25,7 +25,7 @@ OBJS =		$(SRCS:.cpp=.o)
 all : 		$(NAME)
 
 $(NAME):	$(OBJS)
-			$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
+			$(CXX) $(CFLAGS) -o $(NAME) $(OBJS)
 
 clean:
 			rm -f $(OBJS) $(OB)
