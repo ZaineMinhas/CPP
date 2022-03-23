@@ -6,7 +6,7 @@
 #    By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/22 20:30:43 by zminhas           #+#    #+#              #
-#    Updated: 2022/03/22 20:30:45 by zminhas          ###   ########.fr        #
+#    Updated: 2022/03/23 14:58:58 by zminhas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,11 +14,13 @@ CXX = 		c++
 
 CFLAGS =	-Wall -Wextra -Werror -std=c++98
 
-NAME =		fixed
+NAME =		bsp
 
-SRCS =		main.cpp			\
+SRCS =		bsp.cpp				\
+			main.cpp			\
 			Fixed.cpp			\
 			Fixed_operator.cpp	\
+			Point.cpp			\
 
 OBJS =		$(SRCS:.cpp=.o)
 
