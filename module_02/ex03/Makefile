@@ -6,7 +6,7 @@
 #    By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/22 20:30:43 by zminhas           #+#    #+#              #
-#    Updated: 2022/03/23 14:58:58 by zminhas          ###   ########.fr        #
+#    Updated: 2022/03/23 18:58:25 by zminhas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,9 @@ SRCS =		bsp.cpp				\
 			Point.cpp			\
 
 OBJS =		$(SRCS:.cpp=.o)
+
+.cpp.o:
+			$(CXX) $(CFLAGS) -c -I ./ $< -o $(<:.cpp=.o)
 
 all : 		$(NAME)
 
