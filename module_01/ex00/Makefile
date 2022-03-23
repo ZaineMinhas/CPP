@@ -6,7 +6,7 @@
 #    By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/19 15:36:50 by zminhas           #+#    #+#              #
-#    Updated: 2022/03/22 17:27:55 by zminhas          ###   ########.fr        #
+#    Updated: 2022/03/23 19:01:34 by zminhas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,9 @@ SRCS =		main.cpp	\
 			Zombie.cpp		\
 
 OBJS =		$(SRCS:.cpp=.o)
+
+.cpp.o:
+			$(CXX) $(CFLAGS) -c -I ./ $< -o $(<:.cpp=.o)
 
 all : 		$(NAME)
 

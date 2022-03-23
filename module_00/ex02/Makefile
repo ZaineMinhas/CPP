@@ -6,7 +6,7 @@
 #    By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/18 16:30:27 by zminhas           #+#    #+#              #
-#    Updated: 2022/03/22 17:27:46 by zminhas          ###   ########.fr        #
+#    Updated: 2022/03/23 19:01:27 by zminhas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,9 @@ SRCS =		Account.cpp	\
 			tests.cpp	\
 
 OBJS =		$(SRCS:.cpp=.o)
+
+.cpp.o:
+			$(CXX) $(CFLAGS) -c -I ./ $< -o $(<:.cpp=.o)
 
 all : 		$(NAME)
 
