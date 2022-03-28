@@ -1,32 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/28 15:24:43 by zminhas           #+#    #+#             */
-/*   Updated: 2022/03/28 20:13:59 by zminhas          ###   ########.fr       */
+/*   Created: 2022/03/23 16:53:25 by zminhas           #+#    #+#             */
+/*   Updated: 2022/03/28 19:48:48 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-# define SCAVTRAP_HPP
+#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
-# include "ClapTrap.hpp"
-
-class ScavTrap : public ClapTrap
+int main(void)
 {
-private:
+	//ClapTrap bob("bob");
 
-public:
-	ScavTrap();
-	ScavTrap(std::string name);
-	ScavTrap(ScavTrap const &src);
-	~ScavTrap();
-	ScavTrap	operator=(ScavTrap const &rhs);
+	/*bob.attack("Martin");
+	bob.takeDamage(10);
+	bob.beRepaired(1);*/
 
-	void	guardGate(void);
-};
+	/*ScavTrap	leon("Leon");
+	leon.attack("Martin");
+	leon.takeDamage(99);
+	leon.beRepaired(98);
+	leon.guardGate();*/
 
-#endif
+	FragTrap	filip("Filip");
+	filip.takeDamage(99);
+	filip.beRepaired(98);
+	filip.highFivesGuys();
+	return (0);
+}
