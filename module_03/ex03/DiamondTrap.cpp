@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 20:05:44 by zminhas           #+#    #+#             */
-/*   Updated: 2022/03/31 17:12:42 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/03/31 18:25:48 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name")
 }
 
 DiamondTrap::DiamondTrap(DiamondTrap const &src) {
-	std::cout << "FragTrap Copy constructor called" << std::endl;
+	std::cout << "DiamondTrap Copy constructor called" << std::endl;
 	*this = src;
 }
 
