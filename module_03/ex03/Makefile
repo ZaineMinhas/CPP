@@ -6,7 +6,7 @@
 #    By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/23 15:55:24 by zminhas           #+#    #+#              #
-#    Updated: 2022/03/28 20:03:38 by zminhas          ###   ########.fr        #
+#    Updated: 2022/03/31 17:16:20 by zminhas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ CXX = 		c++
 
 CFLAGS =	-Wall -Wextra -Werror -std=c++98
 
-NAME =		diamond.trap
+NAME =		diamondtrap
 
 SRCS =		ClapTrap.cpp	\
 			DiamondTrap.cpp	\

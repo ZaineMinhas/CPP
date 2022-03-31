@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 19:35:48 by zminhas           #+#    #+#             */
-/*   Updated: 2022/03/28 19:39:11 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/03/31 17:27:03 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 
 #include "ClapTrap.hpp"
 
-class FragTrap : public ClapTrap
+class FragTrap : public virtual ClapTrap
 {
 private:
-    
+
 public:
 	FragTrap();
 	FragTrap(std::string name);

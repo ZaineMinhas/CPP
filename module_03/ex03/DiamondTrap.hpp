@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 20:03:58 by zminhas           #+#    #+#             */
-/*   Updated: 2022/03/28 20:23:31 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/03/31 17:53:26 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include "ScavTrap.hpp"
 # include "FragTrap.hpp"
 
-class DiamondTrap
+class DiamondTrap : public ScavTrap, public FragTrap
 {
 private:
 	std::string	_name;

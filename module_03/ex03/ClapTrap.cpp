@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 16:03:55 by zminhas           #+#    #+#             */
-/*   Updated: 2022/03/28 19:56:55 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/03/31 18:10:03 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ ClapTrap::ClapTrap() : _name("the true one"), _lp(10), _mana(10), _dmg(0) {
 }
 
 ClapTrap::ClapTrap(std::string name) : _name(name), _lp(10), _mana(10), _dmg(0) {
-	std::cout << "ClapTrap Name constructor called" << std::endl << std::endl;
+	std::cout << "ClapTrap Name constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap(ClapTrap const &src) {

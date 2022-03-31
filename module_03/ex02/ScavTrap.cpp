@@ -6,16 +6,15 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 15:26:50 by zminhas           #+#    #+#             */
-/*   Updated: 2022/03/28 19:56:34 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/03/31 18:08:03 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap()
+ScavTrap::ScavTrap() : ClapTrap()
 {
 	std::cout << "ScavTrap Default constructor called" << std::endl;
-	this->_name = "the real one";
 	this->_lp = 100;
 	this->_mana = 50;
 	this->_dmg = 20;
