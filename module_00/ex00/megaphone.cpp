@@ -6,12 +6,11 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 17:42:30 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/11 15:10:49 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/04/14 16:15:21 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include <cctype>
 
 int main(int ac, char **av)
 {
