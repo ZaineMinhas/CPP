@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/17 17:21:08 by zminhas           #+#    #+#             */
-/*   Updated: 2022/03/18 18:00:00 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/04/14 16:25:13 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,11 @@ void	PhoneBook::add_contact(void)
 	if (nb_add < 7)
 		this->nb_add++;
 	this->contact[id].id = id;
-	this->contact[id].f_name = PhoneBook::get_info("first name: ");
-	this->contact[id].l_name = PhoneBook::get_info("last name: ");
-	this->contact[id].n_name = PhoneBook::get_info("nickname: ");
-	this->contact[id].phone_nb = PhoneBook::get_info("phone number: ");
-	this->contact[id].secret = PhoneBook::get_info("darkest secret: ");
+	this->contact[id].f_name = get_info("first name: ");
+	this->contact[id].l_name = get_info("last name: ");
+	this->contact[id].n_name = get_info("nickname: ");
+	this->contact[id].phone_nb = get_info("phone number: ");
+	this->contact[id].secret = get_info("darkest secret: ");
 	this->id++;
 	this->id %= 8;
 }
