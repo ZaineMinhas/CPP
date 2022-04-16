@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 18:20:27 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/16 17:22:49 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/04/16 18:43:47 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ Animal::~Animal() {
 	std::cout << "Animal Destructor called" << std::endl;
 }
 
-Animal	&Animal::operator=(Animal const &rhs) {
+Animal	Animal::operator=(Animal const &rhs) {
 	this->type = rhs.type;
 	std::cout << "Animal Copy assignment operator called" << std::endl;
 	return (*this);
@@ -37,4 +37,33 @@ std::string	Animal::getType(void) const {
 
 void	Animal::makeSound(void) const {
 	std::cout << "Some animal noise" << std::endl;
+}
+
+/*----------------------------------------------------------------------------*/
+
+WrongAnimal::WrongAnimal() : type("NONE") {
+	std::cout << "WrongAnimal Default constructor called" << std::endl;
+}
+
+WrongAnimal::WrongAnimal(WrongAnimal const &src) {
+	std::cout << "WrongAnimal Copy constructor called" << std::endl;
+	*this = src;
+}
+
+WrongAnimal::~WrongAnimal() {
+	std::cout << "WrongAnimal Destructor called" << std::endl;
+}
+
+WrongAnimal	WrongAnimal::operator=(WrongAnimal const &rhs) {
+	this->type = rhs.type;
+	std::cout << "WrongAnimal Copy assignment operator called" << std::endl;
+	return (*this);
+}
+
+std::string	WrongAnimal::getType(void) const {
+	return (this->type);
+}
+
+void	WrongAnimal::makeSound(void) const {
+	std::cout << "Some wrong animal noise" << std::endl;
 }

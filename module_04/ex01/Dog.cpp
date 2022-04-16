@@ -6,23 +6,25 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 18:35:39 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/16 17:27:16 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/04/16 19:19:11 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
 Dog::Dog() {
-	std::cout << "Dog Default constructor called" << std::endl;
 	this->type = "Dog";
+	this->_brain = new Brain;
+	std::cout << "Dog Default constructor called" << std::endl;
 }
 
 Dog::Dog(Dog const &src) {
-	std::cout << "Dog Copy constructor called" << std::endl;
 	*this = src;
+	std::cout << "Dog Copy constructor called" << std::endl;
 }
 
 Dog::~Dog() {
+	delete this->_brain;
 	std::cout << "Dog Destructor called" << std::endl;
 }
 

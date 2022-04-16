@@ -6,7 +6,7 @@
 #    By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/31 18:16:30 by zminhas           #+#    #+#              #
-#    Updated: 2022/03/31 18:19:13 by zminhas          ###   ########.fr        #
+#    Updated: 2022/04/16 19:17:50 by zminhas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,9 +14,10 @@ CXX = 		c++
 
 CFLAGS =	-Wall -Wextra -Werror -std=c++98
 
-NAME =		polymorph
+NAME =		brain
 
 SRCS =		Animal.cpp	\
+			Brain.cpp	\
 			Cat.cpp		\
 			Dog.cpp		\
 			main.cpp	\
