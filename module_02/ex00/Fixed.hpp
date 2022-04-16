@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/22 14:47:22 by zminhas           #+#    #+#             */
-/*   Updated: 2022/03/22 18:43:09 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/04/16 17:41:42 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define FIXED_HPP
 
 # include <iostream>
-# include <string>
 
 class Fixed
 {

@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/17 16:01:43 by zminhas           #+#    #+#             */
-/*   Updated: 2022/03/18 17:35:49 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/04/16 17:47:16 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define PHONEBOOK_CLASS_HPP
 
 # include <iostream>
-# include <string>
 
 class Contact
 {

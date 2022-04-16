@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 15:59:46 by zminhas           #+#    #+#             */
-/*   Updated: 2022/03/23 17:02:56 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/04/16 17:39:45 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define CLAPTRAP_HPP
 
 # include <iostream>
-# include <string>
 
 class ClapTrap
 {

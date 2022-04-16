@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/19 15:37:55 by zminhas           #+#    #+#             */
-/*   Updated: 2022/03/19 16:34:04 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/04/16 17:46:28 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define ZOMBIE_HPP
 
 # include <iostream>
-# include <string>
 
 class Zombie
 {

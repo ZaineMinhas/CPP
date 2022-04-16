@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 19:50:45 by zminhas           #+#    #+#             */
-/*   Updated: 2022/03/21 19:51:05 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/04/16 17:44:11 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define KAREN_HPP
 
 # include <iostream>
-# include <string>
 
 class Karen
 {

@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 18:19:20 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/01 14:59:50 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/04/16 17:35:32 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,20 @@
 # define ANIMAL_HPP
 
 # include <iostream>
-# include <string>
 
 class Animal
 {
-private:
-
 protected:
 	std::string	type;
 
 public:
 	Animal();
 	Animal(Animal const &src);
-	~Animal();
-	Animal	operator=(Animal const &rhs);
+	virtual ~Animal();
+	Animal	&operator=(Animal const &rhs);
 
 	std::string	getType(void) const;
+	virtual void	makeSound(void) const; /* for correction */
 };
 
 #endif

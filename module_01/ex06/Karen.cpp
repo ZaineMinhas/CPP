@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 19:51:11 by zminhas           #+#    #+#             */
-/*   Updated: 2022/03/22 17:02:30 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/04/16 17:43:47 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ void	Karen::error(void) {
 void	Karen::complain(std::string level)
 {
 	std::string	check[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
-	void		(Karen::*fc_tab[4])() = {&Karen::debug, &Karen::info, &Karen::warning, &Karen::error};
 
 	for (int i = 0; i < 4; i++)
 		if (check[i] == level)

@@ -1,29 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/31 18:33:58 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/16 17:24:45 by zminhas          ###   ########.fr       */
+/*   Created: 2022/04/16 17:33:54 by zminhas           #+#    #+#             */
+/*   Updated: 2022/04/16 17:34:50 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-# define DOG_HPP
+#ifndef BRAIN_HPP
+# define BRAIN_HPP
 
-# include "Animal.hpp"
-
-class Dog : virtual public Animal
-{
-public:
-	Dog();
-	Dog(Dog const &src);
-	~Dog();
-	Dog	operator=(Dog const &rhs);
-
-	void	makeSound(void) const;
-};
+#include <iostream>
+#include <string>
 
 #endif

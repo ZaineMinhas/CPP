@@ -6,14 +6,13 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 16:42:39 by zminhas           #+#    #+#             */
-/*   Updated: 2022/03/22 18:18:17 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/04/16 17:48:16 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Account.hpp"
-#include <ctime>
 #include <iostream>
-#include <string>
+#include <ctime>
 
 int	Account::_nbAccounts = 0;
 int	Account::_totalAmount = 0;
