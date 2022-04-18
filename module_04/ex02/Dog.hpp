@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 18:33:58 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/18 16:13:01 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/04/18 16:13:24 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include "Animal.hpp"
 
-class Dog : virtual public Animal
+class Dog : virtual public AAnimal
 {
 private:
 	Brain	*_brain;

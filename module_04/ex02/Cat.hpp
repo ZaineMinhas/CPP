@@ -1,30 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/31 18:33:58 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/18 16:13:01 by zminhas          ###   ########.fr       */
+/*   Created: 2022/03/31 18:28:16 by zminhas           #+#    #+#             */
+/*   Updated: 2022/04/18 16:13:20 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-# define DOG_HPP
+#ifndef CAT_HPP
+# define CAT_HPP
 
 # include "Animal.hpp"
 
-class Dog : virtual public Animal
+class Cat : virtual public AAnimal
 {
 private:
 	Brain	*_brain;
 
 public:
-	Dog();
-	Dog(Dog const &src);
-	~Dog();
-	Dog	operator=(Dog const &rhs);
+	Cat();
+	Cat(Cat const &src);
+	~Cat();
+	Cat	operator=(Cat const &rhs);
+
+	void	makeSound(void) const;
+};
+
+class WrongCat : public WrongAnimal
+{
+public:
+	WrongCat();
+	WrongCat(WrongCat const &src);
+	~WrongCat();
+	WrongCat	operator=(WrongCat const &rhs);
 
 	void	makeSound(void) const;
 };
