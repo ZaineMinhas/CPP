@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 16:36:39 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/19 17:59:53 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/04/19 18:29:08 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,16 +32,12 @@ Bureaucrat	Bureaucrat::operator=(Bureaucrat const &rhs) {
 	this->_grade = rhs.getGrade();
 	return (*this);
 }
-
-Bureaucrat	Bureaucrat::operator<<(Bureaucrat const &rhs) {
 	
-}
-
 std::string const	Bureaucrat::getName(void) const {
 	return (this->_name);
 }
 
-int const	Bureaucrat::getGrade(void) const {
+int		Bureaucrat::getGrade(void) const {
 	return (this->_grade);
 }
 
@@ -59,6 +55,7 @@ void	Bureaucrat::decGrade(void)
 		throw (Bureaucrat::GradeTooLowException());
 }
 
-const char	*Bureaucrat::GradeTooHighException(void) const throw() {
-	return ("garde is too high");
+std::ostream	&operator<<(std::ostream &os, Bureaucrat const &lhs) {
+	os << lhs.getName() << ", bureaucrat grade " << lhs.getGrade();
+	return (os);
 }

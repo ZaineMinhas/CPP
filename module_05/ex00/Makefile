@@ -6,7 +6,7 @@
 #    By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/19 16:14:12 by zminhas           #+#    #+#              #
-#    Updated: 2022/04/19 16:15:20 by zminhas          ###   ########.fr        #
+#    Updated: 2022/04/19 18:27:26 by zminhas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,9 +14,9 @@ CXX = 		c++
 
 CFLAGS =	-Wall -Wextra -Werror -std=c++98
 
-NAME =		burreaucrat
+NAME =		bureaucrat
 
-SRCS =		Burreaucrat.cpp	\
+SRCS =		Bureaucrat.cpp	\
 			main.cpp		\
 
 OBJS =		$(SRCS:.cpp=.o)
