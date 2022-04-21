@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 19:05:48 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/20 19:36:20 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/04/21 14:30:05 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Form::Form() : _name("NONE"), _grade(150), _grade_to_exec(0), _signed(0) {}
 
-Form::Form(std::string name, int grade) : _name(name), _grade(grade), _grade_to_exec(0) {
+Form::Form(std::string name, int grade) : _name(name), _signed(0), _grade(grade), _grade_to_exec(0) {
 	if (_grade < 1)
 		throw (GradeTooHighException());
 	else if (_grade > 150)
@@ -38,7 +38,16 @@ int const	Form::getGrade(void) const {
 }
 
 void	Form::beSigned(Bureaucrat &bureaucrat) {
-	a continuer ^^
+	if (bureaucrat.getGrade() <= this->_grade)
+	{
+		this->_signed = 1;
+		std::cout << bureaucrat.getName() << " signed " << this->getName() << std::endl;
+	}
+	else
+	{
+		std::cout << bureaucrat.getName() << " couldn't sign " << this->getName() << " because";
+		throw (GradeTooLowException());
+	}
 }
 
 std::ostream	&operator<<(std::ostream &os, Form const &lhs) {
