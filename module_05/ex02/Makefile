@@ -6,7 +6,7 @@
 #    By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/19 16:14:12 by zminhas           #+#    #+#              #
-#    Updated: 2022/04/23 17:05:32 by zminhas          ###   ########.fr        #
+#    Updated: 2022/04/23 18:34:00 by zminhas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,9 @@ NAME =		form
 SRCS =		Bureaucrat.cpp	\
 			Form.cpp		\
 			main.cpp		\
+			PresidentialPardonForm.cpp	\
+			RobotomyRequestForm.cpp		\
+			ShrubberyCreationForm.cpp	\
 
 OBJS =		$(SRCS:.cpp=.o)
 

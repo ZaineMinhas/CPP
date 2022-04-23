@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 18:50:29 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/20 19:28:44 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/04/23 18:13:19 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,25 +15,30 @@
 
 # include "Bureaucrat.hpp"
 
+class Bureaucrat;
+
 class Form
 {
 private:
-	std::string const	_name;
+	const std::string	_name;
 	bool				_signed;
-	int const			_grade;
-	int const			_grade_to_exec;
+	const int			_grade;
+	const int			_exec_garde;
 		
 public:
 	Form();
-	Form(std::string name, int grade);
+	Form(std::string name, int grade, int exec);
 	Form(Form const &src);
 	~Form();
+
 	Form	operator=(Form const &rhs);
 
-	std::string const	getName(void) const;
-	int const			getGrade(void) const;
+	const std::string	getName(void) const;
+	int					getGrade(void) const;
+	int					getExecGrade(void) const;
+	bool				getSigned(void) const;
 
-	void	beSigned(Bureaucrat &bureaucrat);
+	void	beSigned(Bureaucrat const &bureaucrat);
 
 	class GradeTooHighException : public std::exception {
 	public:
