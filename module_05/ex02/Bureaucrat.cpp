@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 16:36:39 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/23 18:28:01 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/04/24 19:00:05 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,19 @@ void	Bureaucrat::signForm(Form &form)
 		{
 			std::cout << this->getName() << " couldn't sign " << form.getName() << " because garde is too low" << std::endl;
 		}
+	}
+}
+
+void	Bureaucrat::executeForm(Form const &form)
+{
+	try
+	{
+		form.execute(*this);
+		std::cout << this->getName() << " executed " << form.getName() << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cout << this->getName() << " couldn't execute " << form.getName() << " because garde is too low" << std::endl;
 	}
 }
 

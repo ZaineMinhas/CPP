@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 18:57:51 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/23 19:04:09 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/04/24 19:21:05 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,14 @@
 class ShrubberyCreationForm : virtual public Form
 {
 public:
-	ShrubberyCreationForm();
+	ShrubberyCreationForm(void);
 	ShrubberyCreationForm(const std::string target);
 	ShrubberyCreationForm(const ShrubberyCreationForm &src);
-	~ShrubberyCreationForm();
+	~ShrubberyCreationForm(void);
 
 	ShrubberyCreationForm   operator=(const ShrubberyCreationForm &rhs);
+
+	void	exec_form(const Bureaucrat &executor) const;
 };
 
 #endif

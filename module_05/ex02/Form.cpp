@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 19:05:48 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/23 19:24:24 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/04/24 19:30:59 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,9 @@ Form::Form(Form const &src) : _name(src.getName()), _signed(src.getSigned()), _g
 
 Form::~Form() {}
 
-Form	Form::operator=(Form const &rhs) {
-	this->_signed = rhs.getSigned();
+Form	&Form::operator=(Form const &rhs) {
+	//*this = rhs;
+	(void)rhs;
 	return (*this);
 }
 
@@ -56,6 +57,14 @@ void	Form::beSigned(Bureaucrat const &bureaucrat) {
 		this->_signed = 1;
 	else
 		throw (GradeTooLowException());
+}
+
+void	Form::execute(Bureaucrat const &executor) const
+{
+	if (this->getSigned() && executor.getGrade() <= this->getExecGrade())
+		this->exec_form(executor);
+	else
+		throw (Form::GradeTooLowException());
 }
 
 std::ostream	&operator<<(std::ostream &os, Form const &lhs) {

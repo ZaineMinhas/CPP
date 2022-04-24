@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 16:15:30 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/23 17:22:44 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/04/24 18:56:23 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ public:
 	void	incGrade(void);
 	void	decGrade(void);
 	void	signForm(Form &form);
+	void	executeForm(Form const &form);
 
 	class GradeTooHighException : public std::exception {
 	public:

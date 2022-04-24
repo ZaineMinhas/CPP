@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 19:05:48 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/23 18:15:30 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/04/24 18:49:54 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ Form::Form(Form const &src) : _name(src.getName()), _signed(src.getSigned()), _g
 Form::~Form() {}
 
 Form	Form::operator=(Form const &rhs) {
-	this->_signed = rhs.getSigned();
+	*this = rhs;
 	return (*this);
 }
 
