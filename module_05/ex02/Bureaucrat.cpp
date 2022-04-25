@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 16:36:39 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/25 15:38:22 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/04/25 16:20:36 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,11 @@ void	Bureaucrat::signForm(Form &form)
 
 void	Bureaucrat::executeForm(Form const &form)
 {
+	if (!form.getSigned())
+	{
+		std::cout << this->getName() << " couldn't execute " << form.getName() << " is not signed" << std::endl;
+		return ;
+	}
 	try
 	{
 		form.execute(*this);
