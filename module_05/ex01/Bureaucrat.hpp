@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 16:15:30 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/23 17:22:44 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/04/25 15:37:59 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ public:
 	Bureaucrat(Bureaucrat const &src);
 	~Bureaucrat(void);
 
-	Bureaucrat		operator=(Bureaucrat const &rhs);
+	Bureaucrat		&operator=(Bureaucrat const &rhs);
 
 	std::string const	getName(void) const;
 	int					getGrade(void) const;

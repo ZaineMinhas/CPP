@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 17:19:12 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/24 19:24:26 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/04/25 15:38:52 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ public:
 	RobotomyRequestForm(const RobotomyRequestForm &src);
 	~RobotomyRequestForm(void);
 
-	RobotomyRequestForm	operator=(const RobotomyRequestForm &rhs);
+	RobotomyRequestForm	&operator=(const RobotomyRequestForm &rhs);
 
 	void	exec_form(const Bureaucrat &executor) const;
 };

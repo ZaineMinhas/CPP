@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 18:33:58 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/18 16:13:24 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/04/25 15:43:10 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ public:
 	Dog();
 	Dog(Dog const &src);
 	~Dog();
-	Dog	operator=(Dog const &rhs);
+	Dog	&operator=(Dog const &rhs);
 
 	void	makeSound(void) const;
 };

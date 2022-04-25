@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/16 17:33:54 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/16 18:04:28 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/04/25 15:41:19 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ public:
 	Brain();
 	Brain(Brain const &src);
 	~Brain();
-	Brain	operator=(Brain const &rhs);
+	Brain	&operator=(Brain const &rhs);
 
 };
 

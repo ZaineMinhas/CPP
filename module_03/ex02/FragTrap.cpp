@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 19:37:46 by zminhas           #+#    #+#             */
-/*   Updated: 2022/03/31 18:07:31 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/04/25 15:45:08 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ FragTrap::~FragTrap() {
 	std::cout << "FragTrap Destructor called" << std::endl;
 }
 
-FragTrap	FragTrap::operator=(FragTrap const &rhs)
+FragTrap	&FragTrap::operator=(FragTrap const &rhs)
 {
 	std::cout << "ScavTrap Copy assignment operator called" << std::endl;
 	this->_name = rhs.getName();

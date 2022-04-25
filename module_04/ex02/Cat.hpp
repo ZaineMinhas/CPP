@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 18:28:16 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/18 16:13:20 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/04/25 15:43:27 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ public:
 	Cat();
 	Cat(Cat const &src);
 	~Cat();
-	Cat	operator=(Cat const &rhs);
+	Cat	&operator=(Cat const &rhs);
 
 	void	makeSound(void) const;
 };
@@ -35,7 +35,7 @@ public:
 	WrongCat();
 	WrongCat(WrongCat const &src);
 	~WrongCat();
-	WrongCat	operator=(WrongCat const &rhs);
+	WrongCat	&operator=(WrongCat const &rhs);
 
 	void	makeSound(void) const;
 };

@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 15:24:43 by zminhas           #+#    #+#             */
-/*   Updated: 2022/03/31 16:25:57 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/04/25 15:44:44 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ public:
 	ScavTrap(std::string name);
 	ScavTrap(ScavTrap const &src);
 	~ScavTrap();
-	ScavTrap	operator=(ScavTrap const &rhs);
+	ScavTrap	&operator=(ScavTrap const &rhs);
 
 	void	guardGate(void);
 };

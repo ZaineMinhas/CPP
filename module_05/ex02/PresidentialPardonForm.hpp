@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 17:55:06 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/24 19:25:48 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/04/25 15:38:37 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ public:
 	PresidentialPardonForm(const PresidentialPardonForm &src);
 	~PresidentialPardonForm();
 
-	PresidentialPardonForm	operator=(const PresidentialPardonForm &rhs);
+	PresidentialPardonForm	&operator=(const PresidentialPardonForm &rhs);
 
 	void	exec_form(const Bureaucrat &executor) const;
 };

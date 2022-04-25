@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 18:20:27 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/18 16:06:48 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/04/25 15:42:37 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ WrongAnimal::~WrongAnimal() {
 	std::cout << "WrongAnimal Destructor called" << std::endl;
 }
 
-WrongAnimal	WrongAnimal::operator=(WrongAnimal const &rhs) {
+WrongAnimal	&WrongAnimal::operator=(WrongAnimal const &rhs) {
 	this->type = rhs.type;
 	std::cout << "WrongAnimal Copy assignment operator called" << std::endl;
 	return (*this);

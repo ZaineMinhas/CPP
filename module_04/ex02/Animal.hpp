@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 18:19:20 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/18 16:06:24 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/04/25 15:42:20 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ public:
 	WrongAnimal();
 	WrongAnimal(WrongAnimal const &src);
 	~WrongAnimal();
-	WrongAnimal	operator=(WrongAnimal const &rhs);
+	WrongAnimal	&operator=(WrongAnimal const &rhs);
 
 	std::string	getType(void) const;
 	void		makeSound(void) const;

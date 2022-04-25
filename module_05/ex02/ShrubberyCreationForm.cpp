@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 18:59:09 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/24 19:22:07 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/04/25 15:39:13 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &src) :
 
 ShrubberyCreationForm::~ShrubberyCreationForm() {}
 
-ShrubberyCreationForm   ShrubberyCreationForm::operator=(const ShrubberyCreationForm &rhs) {
+ShrubberyCreationForm   &ShrubberyCreationForm::operator=(const ShrubberyCreationForm &rhs) {
 	Form::operator=(rhs);
 	return (*this);
 }

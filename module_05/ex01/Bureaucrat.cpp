@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 16:36:39 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/23 18:28:01 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/04/25 15:38:04 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ Bureaucrat::Bureaucrat(Bureaucrat const &src) {
 
 Bureaucrat::~Bureaucrat() {}
 
-Bureaucrat	Bureaucrat::operator=(Bureaucrat const &rhs) {
+Bureaucrat	&Bureaucrat::operator=(Bureaucrat const &rhs) {
 	this->_grade = rhs.getGrade();
 	return (*this);
 }

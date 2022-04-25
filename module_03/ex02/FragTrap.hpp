@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 19:35:48 by zminhas           #+#    #+#             */
-/*   Updated: 2022/03/28 19:39:11 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/04/25 15:45:03 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ public:
 	FragTrap(std::string name);
 	FragTrap(FragTrap const &src);
 	~FragTrap();
-	FragTrap	operator=(FragTrap const &rhs);
+	FragTrap	&operator=(FragTrap const &rhs);
 
 	void	highFivesGuys(void);
 };

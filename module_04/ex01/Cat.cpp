@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 18:29:19 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/16 19:19:30 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/04/25 15:41:43 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ Cat::~Cat() {
 	std::cout << "Cat Destructor called" << std::endl;
 }
 
-Cat	Cat::operator=(Cat const &rhs) {
+Cat	&Cat::operator=(Cat const &rhs) {
 	this->type = rhs.type;
 	std::cout << "Cat Copy assignment operator called" << std::endl;
 	return (*this);
@@ -54,7 +54,7 @@ WrongCat::~WrongCat() {
 	std::cout << "WrongCat Destructor called" << std::endl;
 }
 
-WrongCat	WrongCat::operator=(WrongCat const &rhs) {
+WrongCat	&WrongCat::operator=(WrongCat const &rhs) {
 	this->type = rhs.type;
 	std::cout << "WrongCat Copy assignment operator called" << std::endl;
 	return (*this);

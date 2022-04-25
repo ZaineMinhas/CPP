@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 15:26:50 by zminhas           #+#    #+#             */
-/*   Updated: 2022/03/31 18:08:46 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/04/25 15:46:11 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ ScavTrap::~ScavTrap() {
 	std::cout << "ScavTrap Destructor called" << std::endl;
 }
 
-ScavTrap	ScavTrap::operator=(ScavTrap const &rhs)
+ScavTrap	&ScavTrap::operator=(ScavTrap const &rhs)
 {
 	std::cout << "ScavTrap Copy assignment operator called" << std::endl;
 	this->_name = rhs.getName();

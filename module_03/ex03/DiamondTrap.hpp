@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 20:03:58 by zminhas           #+#    #+#             */
-/*   Updated: 2022/03/31 17:53:26 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/04/25 15:44:12 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ public:
 	DiamondTrap(std::string name);
 	DiamondTrap(DiamondTrap const &src);
 	~DiamondTrap();
-	DiamondTrap	operator=(DiamondTrap const &rhs);
+	DiamondTrap	&operator=(DiamondTrap const &rhs);
 
 	std::string	getName(void) const;
 	void		whoAmI(void);

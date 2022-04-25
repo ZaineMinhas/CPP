@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 18:50:29 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/23 18:13:19 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/04/25 15:37:02 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ public:
 	Form(Form const &src);
 	~Form();
 
-	Form	operator=(Form const &rhs);
+	Form	&operator=(Form const &rhs);
 
 	const std::string	getName(void) const;
 	int					getGrade(void) const;

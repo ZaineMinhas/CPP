@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 17:22:39 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/24 19:25:12 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/04/25 15:38:58 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &src) : Form(
 
 RobotomyRequestForm::~RobotomyRequestForm() {}
 
-RobotomyRequestForm	RobotomyRequestForm::operator=(const RobotomyRequestForm &rhs) {
+RobotomyRequestForm	&RobotomyRequestForm::operator=(const RobotomyRequestForm &rhs) {
     Form::operator=(rhs);
     return (*this);
 }

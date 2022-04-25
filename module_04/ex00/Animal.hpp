@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 18:19:20 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/16 18:28:01 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/04/25 15:40:01 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ public:
 	Animal();
 	Animal(Animal const &src);
 	virtual ~Animal();
-	Animal	operator=(Animal const &rhs);
+	Animal	&operator=(Animal const &rhs);
 
 	std::string	getType(void) const;
 	virtual void	makeSound(void) const;
@@ -39,7 +39,7 @@ public:
 	WrongAnimal();
 	WrongAnimal(WrongAnimal const &src);
 	~WrongAnimal();
-	WrongAnimal	operator=(WrongAnimal const &rhs);
+	WrongAnimal	&operator=(WrongAnimal const &rhs);
 
 	std::string	getType(void) const;
 	void		makeSound(void) const;

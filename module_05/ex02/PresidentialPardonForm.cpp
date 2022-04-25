@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 17:56:51 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/24 19:26:13 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/04/25 15:38:42 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm &src
 
 PresidentialPardonForm::~PresidentialPardonForm() {}
 
-PresidentialPardonForm	PresidentialPardonForm::operator=(const PresidentialPardonForm &rhs) {
+PresidentialPardonForm	&PresidentialPardonForm::operator=(const PresidentialPardonForm &rhs) {
 	Form::operator=(rhs);
 	return (*this);
 }

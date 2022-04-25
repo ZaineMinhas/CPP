@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 18:57:51 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/24 19:21:05 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/04/25 15:39:08 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ public:
 	ShrubberyCreationForm(const ShrubberyCreationForm &src);
 	~ShrubberyCreationForm(void);
 
-	ShrubberyCreationForm   operator=(const ShrubberyCreationForm &rhs);
+	ShrubberyCreationForm   &operator=(const ShrubberyCreationForm &rhs);
 
 	void	exec_form(const Bureaucrat &executor) const;
 };
