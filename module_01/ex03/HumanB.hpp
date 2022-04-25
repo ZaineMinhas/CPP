@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/20 14:26:57 by zminhas           #+#    #+#             */
-/*   Updated: 2022/03/20 16:41:14 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/04/25 17:28:37 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ public:
 
 
 	void	attack(void);
-	void	setWeapon(Weapon weapon);
+	void	setWeapon(Weapon &weapon);
 };
 
 #endif
