@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/19 16:35:21 by zminhas           #+#    #+#             */
-/*   Updated: 2022/03/22 16:41:21 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/04/25 16:33:49 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,6 @@ Zombie*    zombieHorde( int N, std::string name )
 
 	Zombie	*zombi = new Zombie[N];
 	for (int i = 0; i < N; i++)
-	{
 		zombi[i].set_name(name);
-		zombi[i].announce();
-	}
 	return (zombi);
 }

@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/19 16:34:47 by zminhas           #+#    #+#             */
-/*   Updated: 2022/03/22 16:42:55 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/04/25 16:35:59 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,14 @@
 
 int	main(void)
 {
-	Zombie *zombi;
+	Zombie *horde;
+	const int	N = 10;
 
-	zombi = zombieHorde(10, "leon");
-	delete [] zombi;
+	horde = zombieHorde(N, "leon");
+	for (int i = 0; i < N; i++)
+	{
+		horde[i].announce();
+	}
+	delete [] horde;
+	return (0);
 }
