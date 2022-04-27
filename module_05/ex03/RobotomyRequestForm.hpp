@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 17:19:12 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/25 15:38:52 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/04/27 15:22:46 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include "Form.hpp"
 
-class RobotomyRequestForm : virtual public Form
+class RobotomyRequestForm : public Form
 {
 public:
 	RobotomyRequestForm(void);

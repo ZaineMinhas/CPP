@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 17:55:06 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/25 15:38:37 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/04/27 15:22:43 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include "Form.hpp"
 
-class PresidentialPardonForm : virtual public Form
+class PresidentialPardonForm : public Form
 {
 public:
 	PresidentialPardonForm();
