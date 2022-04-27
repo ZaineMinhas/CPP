@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 18:50:29 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/25 19:26:34 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/04/27 17:07:10 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,12 @@ public:
 	public:
 		virtual const char		*what() const throw() {
 			return ("garde is too low");
+		}
+	};
+	class NotSignedException : public std::exception {
+	public:
+		virtual const char		*what() const throw() {
+			return ("not signed");
 		}
 	};
 };

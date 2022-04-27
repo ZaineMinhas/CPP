@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 19:05:48 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/25 15:48:05 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/04/27 16:10:23 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,10 +60,12 @@ void	Form::beSigned(Bureaucrat const &bureaucrat) {
 
 void	Form::execute(Bureaucrat const &executor) const
 {
-	if (this->getSigned() && executor.getGrade() <= this->getExecGrade())
-		this->exec_form(executor);
-	else
+	if (!this->getSigned())
+		throw (Form::NotSignedException());
+	if (executor.getGrade() > this->getExecGrade())
 		throw (Form::GradeTooLowException());
+	else
+		this->exec_form(executor);
 }
 
 std::ostream	&operator<<(std::ostream &os, Form const &lhs) {

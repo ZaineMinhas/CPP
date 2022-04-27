@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 18:17:20 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/25 16:25:17 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/04/27 16:32:15 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@
 
 int	main(void)
 {
-	try
-	{
 		ShrubberyCreationForm	form1("Garden");
 		RobotomyRequestForm		form2("Bob l'éponge");
 		PresidentialPardonForm	form3("Donald Trump");
@@ -52,9 +50,5 @@ int	main(void)
 		bill.executeForm(form2);
 		bill.executeForm(form2);
 		bill.executeForm(form2);
-	}
-	catch (std::exception &e){
-		std::cout << e.what() << std::endl;
-	}
 	return (0);
 }
