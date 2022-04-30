@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 18:13:21 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/29 19:33:23 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/04/30 19:37:28 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,13 +62,81 @@ bool	Cast::isChar(void) const
 
 bool	Cast::isInt(void) const
 {
-	for (int i = 0; i < this->_arg.length(); i++)
+	for (size_t i = 0; i < this->_arg.length(); i++)
 	{
 		if (!i && (this->_arg[i] == '+' || this->_arg[i] == '-'))
 			i++;
-		
 		else if (!(this->_arg[i] >= '0' && this->_arg[i] <= '9'))
 			return (false);
 	}
 	return (true);
 }
+
+bool	Cast::isFloat(void) const
+{
+	if (!this->_arg.compare("nanf") || !this->_arg.compare("+inff") || !this->_arg.compare("-inff"))
+		return (true);
+	if (this->_arg[this->_arg.length() - 1] != 'f')
+		return (false);
+	int	dot = 0;
+	for (size_t i = 0; i < this->_arg.length(); i++)
+	{
+		if (!i && (this->_arg[i] != '+' || this->_arg[i] != '-') && !(this->_arg[i] >= '0' && this->_arg[i] <= '9'))
+			return (false);
+		if (i == this->_arg.length() - 1 && this->_arg[i] == 'f')
+			return (true);
+		else if (!(this->_arg[i] >= '0' && this->_arg[i] <= '9'))
+		{
+			if (this->_arg[i] == '.')
+				dot++;
+			else
+				return (false);
+			if (dot != 1)
+				return (false);
+		}
+	}
+	return (true);
+}
+
+bool	Cast::isDouble(void) const
+{
+	if (!this->_arg.compare("nan") || !this->_arg.compare("+inf") || !this->_arg.compare("-inf"))
+		return (true);
+	int	dot = 0;
+	for (size_t i = 0; i < this->_arg.length(); i++)
+	{
+		if (!i && (this->_arg[i] != '+' || this->_arg[i] != '-') && !(this->_arg[i] >= '0' && this->_arg[i] <= '9'))
+			return (false);
+		else if (!(this->_arg[i] >= '0' && this->_arg[i] <= '9'))
+		{
+			if (this->_arg[i] == '.')
+				dot++;
+			else
+				return (false);
+			if (dot != 1)
+				return (false);
+		}
+	}
+	return (true);
+}
+
+void	Cast::castChar(void)
+{
+	if (this->_arg.length() == 1)
+		this->_double = static_cast<double>(this->_arg[0]);
+	else
+		this->_double = static_cast<double>(this->_arg[1]);
+	this->_float = static_cast<float>(this->_double);
+	this->_int = static_cast<int>(this->_double);
+	this->_char = static_cast<char>(this->_double);
+
+}
+
+void	Cast::castOther(void)
+{
+	this->_double = atof(this->_arg.c_str());
+	this->_float = static_cast<float>(this->_double);
+	this->_int = static_cast<int>(this->_double);
+	this->_char = static_cast<char>(this->_double);
+}
+

@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 18:13:18 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/29 18:42:08 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/04/30 19:26:51 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define CAST_HPP
 
 # include <iostream>
+# include <stdlib.h>
 
 class Cast
 {
@@ -33,10 +34,10 @@ public:
 	Cast	&operator=(const Cast &rhs);
 
 	std::string	getArg(void) const;
-	char	getChar(void) const;
-	int	getInt(void) const;
-	float	getFloat(void) const;
-	double	getDouble(void) const;
+	char		getChar(void) const;
+	int			getInt(void) const;
+	float		getFloat(void) const;
+	double		getDouble(void) const;
 
 	bool	isChar(void) const;
 	bool	isInt(void) const;
@@ -44,9 +45,7 @@ public:
 	bool	isDouble(void) const;
 
 	void	castChar(void);
-	void	castInt(void);
-	void	castFloat(void);
-	void	castDouble(void);
+	void	castOther(void);
 
 };
 
