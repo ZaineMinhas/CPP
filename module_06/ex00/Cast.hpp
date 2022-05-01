@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 18:13:18 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/30 19:26:51 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/01 16:35:01 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ private:
 	int			_int;
 	float		_float;
 	double		_double;
+	double		_cast;
 	
 public:
 	Cast(void);
@@ -45,8 +46,9 @@ public:
 	bool	isDouble(void) const;
 
 	void	castChar(void);
-	void	castOther(void);
-
+	void	castInt(void);
+	void	castFloat(void);
+	void	castDouble(void);
 };
 
 #endif

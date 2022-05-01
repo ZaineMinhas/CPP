@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 18:13:21 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/30 19:37:28 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/01 16:10:55 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,23 +120,37 @@ bool	Cast::isDouble(void) const
 	return (true);
 }
 
-void	Cast::castChar(void)
-{
+void	Cast::castChar(void) {
 	if (this->_arg.length() == 1)
-		this->_double = static_cast<double>(this->_arg[0]);
+		this->_cast = static_cast<double>(this->_arg[0]);
 	else
-		this->_double = static_cast<double>(this->_arg[1]);
-	this->_float = static_cast<float>(this->_double);
-	this->_int = static_cast<int>(this->_double);
-	this->_char = static_cast<char>(this->_double);
-
+		this->_cast = static_cast<double>(this->_arg[1]);
+	this->_char = static_cast<char>(this->_cast);
+	this->_int = static_cast<int>(this->_cast);
+	this->_float = static_cast<float>(this->_cast);
+	this->_double = static_cast<double>(this->_cast);
 }
 
-void	Cast::castOther(void)
-{
-	this->_double = atof(this->_arg.c_str());
-	this->_float = static_cast<float>(this->_double);
-	this->_int = static_cast<int>(this->_double);
-	this->_char = static_cast<char>(this->_double);
+void	Cast::castInt(void) {
+	this->_cast = atof(this->_arg.c_str());
+	this->_int = static_cast<int>(this->_cast);
+	this->_char = static_cast<char>(this->_cast);
+	this->_float = static_cast<float>(this->_cast);
+	this->_double = static_cast<float>(this->_cast);
 }
 
+void	Cast::castFloat(void) {
+	this->_cast = atof(this->_arg.c_str());
+	this->_float = static_cast<float>(this->_cast);
+	this->_int = static_cast<int>(this->_cast);
+	this->_char = static_cast<char>(this->_cast);
+	this->_double = static_cast<double>(this->_cast);
+}
+
+void	Cast::castDouble(void) {
+	this->_cast = atof(this->_arg.c_str());
+	this->_double = this->_cast;
+	this->_int = static_cast<int>(this->_double);
+	this->_float = static_cast<float>(this->_double);
+	this->_char = static_cast<char>(this->_double);
+}

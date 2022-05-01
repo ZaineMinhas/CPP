@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 18:00:56 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/30 19:40:09 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/01 16:31:07 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,35 +21,43 @@ int	return_error(const std::string error)
 int	main(int ac, char **av)
 {
 	if (ac != 2)
-		return (return_error("zizi"));
+		return (return_error("Error"));
 	Cast	cast(av[1]);
 	
-	if (cast.isChar())
+	if (cast.isInt())
+		cast.castInt();
+	else if (cast.isChar())
 		cast.castChar();
-	else if (cast.isInt())
-		cast.castOther();
 	else if (cast.isFloat())
-		cast.castOther();
+		cast.castFloat();
 	else if (cast.isDouble())
-		cast.castOther();
+		cast.castDouble();
 	else
-		return_error("zizi");
+		return (return_error("Error"));
 	bool	dot = false;
 	
 	if (cast.getInt() == cast.getDouble())
 		dot = true;
-	if (cast.getInt() < 32 || cast.getInt() > 126)
-		std::cout << "CHAR : non displayable" << std::endl;
+	if (cast.getInt() >= 0 && cast.getInt() <= 127)
+	{
+		if (cast.getInt() >= 32 && cast.getInt() <= 126)
+			std::cout << "char: " << "\'" << cast.getChar() << "\'" << std::endl;
+		else
+			std::cout << "char: non displayable" << std::endl;
+	}
 	else
-		std::cout << "CHAR : " << "\'" << cast.getChar() << "\'" << std::endl;
-	std::cout << "INT : " << cast.getInt() << std::endl;
+		std::cout << "char: impossible" << std::endl;
+	if (!cast.getArg().compare("nanf") || !cast.getArg().compare("+inff") || !cast.getArg().compare("-inff") || !cast.getArg().compare("nan") || !cast.getArg().compare("+inf") || !cast.getArg().compare("-inf"))
+		std::cout << "int: impossible" << std::endl;
+	else
+		std::cout << "int: " << cast.getInt() << std::endl;
 	if (dot)
-		std::cout << "FLOAT : " << cast.getFloat() << ".0f" << std::endl;
+		std::cout << "float: " << cast.getFloat() << ".0f" << std::endl;
 	else
-		std::cout << "FLOAT : " << cast.getFloat() << "f" << std::endl;
+		std::cout << "float: " << cast.getFloat() << "f" << std::endl;
 	if (dot)
-		std::cout << "DOUBLE : " << cast.getDouble() << ".0" << std::endl; 
+		std::cout << "double: " << cast.getDouble() << ".0" << std::endl; 
 	else
-		std::cout << "DOUBLE : " << cast.getDouble() << std::endl;
+		std::cout << "double: " << cast.getDouble() << std::endl;
 	return (0);
 }
