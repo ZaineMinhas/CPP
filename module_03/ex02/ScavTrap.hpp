@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 15:24:43 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/25 15:45:16 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/04 18:36:11 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@
 
 class ScavTrap : public ClapTrap
 {
-private:
-
 public:
 	ScavTrap();
 	ScavTrap(std::string name);
