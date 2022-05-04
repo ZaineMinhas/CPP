@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 15:26:50 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/25 15:44:48 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/04 16:11:34 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,18 @@
 ScavTrap::ScavTrap() : ClapTrap()
 {
 	std::cout << "ScavTrap Default constructor called" << std::endl;
-	this->_lp = 100;
-	this->_mana = 50;
-	this->_dmg = 20;
+	this->_hitpoints = 100;
+	this->_energy = 50;
+	this->_attack_damage = 20;
 }
 
 ScavTrap::ScavTrap(std::string name)
 {
 	std::cout << "ScavTrap Name constructor called" << std::endl << std::endl;
 	this->_name = name;
-	this->_lp = 100;
-	this->_mana = 50;
-	this->_dmg = 20;
+	this->_hitpoints = 100;
+	this->_energy = 50;
+	this->_attack_damage = 20;
 }
 
 ScavTrap::ScavTrap(ScavTrap const &src) {
@@ -42,15 +42,15 @@ ScavTrap	&ScavTrap::operator=(ScavTrap const &rhs)
 {
 	std::cout << "ScavTrap Copy assignment operator called" << std::endl;
 	this->_name = rhs.getName();
-	this->_lp = rhs.getLp();
-	this->_mana = rhs.getMana();
-	this->_dmg = rhs.getDmg();
+	this->_hitpoints = rhs.getLp();
+	this->_energy = rhs.getMana();
+	this->_attack_damage = rhs.getDmg();
 	return (*this);
 }
 
 void	ScavTrap::guardGate(void)
 {
-	if (_lp <= 0)
+	if (_hitpoints <= 0)
 		std::cout << "ClapTrap " << _name << " is dead..." << std::endl;
 	else
 		std::cout << "ClapTrap " << _name << " is now in Gate Keeper mode." << std::endl;

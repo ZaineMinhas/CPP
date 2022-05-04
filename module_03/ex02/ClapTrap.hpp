@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 15:59:46 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/16 17:38:54 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/04 16:11:34 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ class ClapTrap
 {
 protected:
 	std::string	_name;
-	int			_lp;
-	int			_mana;
-	int			_dmg;
+	int			_hitpoints;
+	int			_energy;
+	int			_attack_damage;
 
 public:
 	ClapTrap();
