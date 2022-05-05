@@ -6,7 +6,7 @@
 #    By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/19 16:14:12 by zminhas           #+#    #+#              #
-#    Updated: 2022/05/01 19:02:06 by zminhas          ###   ########.fr        #
+#    Updated: 2022/05/05 17:16:59 by zminhas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CFLAGS =	-Wall -Wextra -Werror -std=c++98
 
 NAME =		convert
 
-SRCS =		main.cpp		\
+SRCS =		main.cpp
 
 OBJS =		$(SRCS:.cpp=.o)
 
