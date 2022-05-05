@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 15:26:50 by zminhas           #+#    #+#             */
-/*   Updated: 2022/05/04 16:11:34 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/05 15:39:08 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,5 +54,19 @@ void	ScavTrap::guardGate(void)
 		std::cout << "ClapTrap " << _name << " is dead..." << std::endl;
 	else
 		std::cout << "ClapTrap " << _name << " is now in Gate Keeper mode." << std::endl;
+	std::cout << std::endl;
+}
+
+void	ScavTrap::attack(const std::string& target)
+{
+	if (_energy == 0)
+		std::cout << "ScavTrap " << _name << " have no energy !" << std::endl;
+	else if (_hitpoints <= 0)
+		std::cout << "ScavTrap " << _name << " is dead..." << std::endl;
+	else
+	{
+		std::cout << "Scavtrap " << _name << " attacks " << target << ", causing " << _attack_damage << " points of damage !" << std::endl;
+		this->_energy--;
+	}
 	std::cout << std::endl;
 }

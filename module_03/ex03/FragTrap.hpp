@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 19:35:48 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/25 15:44:33 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/05 15:50:19 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@
 
 class FragTrap : public virtual ClapTrap
 {
-private:
-
 public:
 	FragTrap();
 	FragTrap(std::string name);
