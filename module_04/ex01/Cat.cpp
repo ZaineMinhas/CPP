@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 18:29:19 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/25 15:41:43 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/06 19:53:01 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,17 @@ Cat::~Cat() {
 
 Cat	&Cat::operator=(Cat const &rhs) {
 	this->type = rhs.type;
+	this->_brain = new Brain(rhs.getBrain());
 	std::cout << "Cat Copy assignment operator called" << std::endl;
 	return (*this);
 }
 
 void	Cat::makeSound(void) const {
 	std::cout << "Meow ..." << std::endl;
+}
+
+Brain	Cat::getBrain(void) const {
+	return (*this->_brain);
 }
 
 /*----------------------------------------------------------------------------*/

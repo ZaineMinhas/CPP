@@ -5,8 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/18 18:35:52 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/18 18:35:53 by zminhas          ###   ########.fr       */
+/*   Created: 2022/05/06 19:28:20 by zminhas           #+#    #+#             */
+/*   Updated: 2022/05/06 19:28:21 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Ice.hpp"
+
+Ice::Ice() {}
+
+Ice::Ice(const Ice &src) {
+	*this = src;
+}
+
+Ice::~Ice() {}
+
+Ice	&Ice::operator=(const Ice &rhs) {
+	
+	return (*this);
+}

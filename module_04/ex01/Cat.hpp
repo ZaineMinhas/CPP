@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 18:28:16 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/25 15:41:36 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/06 19:52:32 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ public:
 	Cat	&operator=(Cat const &rhs);
 
 	void	makeSound(void) const;
+
+	Brain	getBrain(void) const;
 };
 
 class WrongCat : public WrongAnimal

@@ -1,35 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Materia.hpp                                        :+:      :+:    :+:   */
+/*   AMateria.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/18 18:05:43 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/18 18:29:56 by zminhas          ###   ########.fr       */
+/*   Created: 2022/05/06 19:27:57 by zminhas           #+#    #+#             */
+/*   Updated: 2022/05/06 19:27:58 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MATERIA_HPP
-# define MATERIA_HPP
+#include "AMateria.hpp"
 
-# include <iostream>
-# include "Character.hpp"
+AMateria::AMateria() {}
 
-class AMateria
-{
-protected:
+AMateria::AMateria(const AMateria &src) {
+	*this = src;
+}
 
-public:
-	AMateria();
-	AMateria(std::string const & type);
-	virtual	~AMateria();
-	AMateria	operator=(AMateria const &rhs);
+AMateria::~AMateria() {}
 
-	std::string const &getType() const; //Returns the materia type
+AMateria	&AMateria::operator=(const AMateria &rhs) {
+	
+	return (*this);
+}
 
-	virtual AMateria* clone() const = 0;
-	virtual void use(ICharacter& target);
-};
-
-#endif
+std::string const	&AMateria::getType() const {
+	return (this->_type);
+}
