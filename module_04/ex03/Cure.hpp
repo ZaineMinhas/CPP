@@ -6,20 +6,18 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 19:28:14 by zminhas           #+#    #+#             */
-/*   Updated: 2022/05/06 19:28:15 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/08 16:39:20 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CURE_HPP
 # define CURE_HPP
 
-# include "Materia.hpp"
-# include "Character.hpp"
+# include "AMateria.hpp"
+# include "ICharacter.hpp"
 
-class Cure
+class Cure : public AMateria
 {
-private:
-	
 public:
 	Cure(void);
 	Cure(const Cure &src);
@@ -27,6 +25,7 @@ public:
 
 	Cure	&operator=(const Cure &rhs);
 
+	virtual AMateria* clone() const;
 };
 
 #endif
