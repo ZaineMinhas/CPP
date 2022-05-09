@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 19:28:24 by zminhas           #+#    #+#             */
-/*   Updated: 2022/05/08 16:03:09 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/09 17:07:49 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ public:
 	Ice	&operator=(const Ice &rhs);
 
 	virtual AMateria* clone() const;
+	void	use(ICharacter& target);
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 18:20:27 by zminhas           #+#    #+#             */
-/*   Updated: 2022/05/09 13:36:35 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/09 16:30:03 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ AAnimal::~AAnimal() {
 
 AAnimal	&AAnimal::operator=(AAnimal const &rhs) {
 	this->_type = rhs.getType();
-	std::cout << "AAnimal Copy assignment operator called" << std::endl;
 	return (*this);
 }
 
@@ -52,7 +51,6 @@ WrongAnimal::~WrongAnimal() {
 
 WrongAnimal	&WrongAnimal::operator=(WrongAnimal const &rhs) {
 	this->_type = rhs.getType();
-	std::cout << "WrongAnimal Copy assignment operator called" << std::endl;
 	return (*this);
 }
 

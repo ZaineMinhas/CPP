@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 19:28:20 by zminhas           #+#    #+#             */
-/*   Updated: 2022/05/08 16:06:13 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/09 17:09:28 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,8 @@ Ice	&Ice::operator=(const Ice &rhs) {
 
 AMateria* Ice::clone() const {
 	return (new Ice(*this));
+}
+
+void	Ice::use(ICharacter &target) {
+	std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
 }

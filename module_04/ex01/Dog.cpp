@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 18:35:39 by zminhas           #+#    #+#             */
-/*   Updated: 2022/05/09 13:54:47 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/09 16:29:46 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ Dog::~Dog() {
 Dog	&Dog::operator=(Dog const &rhs) {
 	this->_type = rhs.getType();
 	this->_brain = new Brain(rhs.getBrain());
-	std::cout << "Dog Copy assignment operator called" << std::endl;
 	return (*this);
 }
 

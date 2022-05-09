@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 19:28:30 by zminhas           #+#    #+#             */
-/*   Updated: 2022/05/08 18:50:48 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/09 17:18:25 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ public:
 	virtual void unequip(int idx) = 0;
 	virtual void use(int idx, ICharacter& target) = 0;
 };
+
+/*-----------------------------------------------------------------------*/
 
 class Character : public ICharacter
 {

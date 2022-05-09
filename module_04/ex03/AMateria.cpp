@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 19:27:57 by zminhas           #+#    #+#             */
-/*   Updated: 2022/05/08 19:48:31 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/09 17:15:00 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,7 @@ std::string const	&AMateria::getType() const {
 }
 
 void	AMateria::use(ICharacter& target) {
-	if (this->_type == "ice")
-		std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
-	else if (this->_type == "cure")
-		std::cout << "* heals " << target.getName() << "\'s wounds *" << std::endl;
-	else
-		std::cout << "Error" << std::endl;
+	std::cout << "Use nothing on " << target.getName() << std::endl;
 }
 
 /*---------------------------------------------------------------------------------------*/
@@ -77,7 +72,10 @@ const AMateria	*MateriaSource::getItem(const int id) const {
 void	MateriaSource::learnMateria(AMateria *materia) {
 	for (int i = 0; i < 4; i++)
 		if (!this->_item[i])
+		{
 			this->_item[i] = materia;
+			return ;
+		}
 }
 
 AMateria*	MateriaSource::createMateria(std::string const & type) {

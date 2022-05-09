@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 19:27:34 by zminhas           #+#    #+#             */
-/*   Updated: 2022/05/08 18:55:44 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/09 17:18:50 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,6 @@ public:
 	virtual AMateria* clone() const = 0;
 	virtual void use(ICharacter& target);
 };
-
-/*-----------------------------------------------------------------------*/
 
 class IMateriaSource
 {

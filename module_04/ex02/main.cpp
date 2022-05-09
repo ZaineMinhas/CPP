@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 18:55:17 by zminhas           #+#    #+#             */
-/*   Updated: 2022/05/09 14:23:36 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/09 16:38:20 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,15 @@
 int	main(void)
 {
 	const AAnimal* j = new Dog();
+	std::cout << std::endl;
 	const AAnimal* i = new Cat();
+	std::cout << std::endl;
 	const WrongAnimal* k = new WrongCat();
+	std::cout << std::endl;
 	const WrongCat* l = new WrongCat();
+	//const AAnimal* n = new AAnimal();
 
-	std::cout << "---------------------------" << std::endl << std::endl;
+	std::cout << std::endl << "---------------------------" << std::endl << std::endl;
 
 	std::cout << "type : " << j->getType() << std::endl;
 	j->makeSound();
