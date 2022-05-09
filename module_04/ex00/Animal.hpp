@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 18:19:20 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/25 15:40:01 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/09 13:42:30 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 class Animal
 {
 protected:
-	std::string	type;
+	std::string	_type;
 
 public:
 	Animal();
@@ -33,7 +33,7 @@ public:
 class WrongAnimal
 {
 protected:
-	std::string type;
+	std::string _type;
 
 public:
 	WrongAnimal();

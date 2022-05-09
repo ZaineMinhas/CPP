@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 18:28:16 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/25 15:40:19 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/09 14:06:57 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class Cat : virtual public Animal
 public:
 	Cat();
 	Cat(Cat const &src);
-	~Cat();
+	virtual ~Cat();
 	Cat	&operator=(Cat const &rhs);
 
 	void	makeSound(void) const;

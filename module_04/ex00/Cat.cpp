@@ -6,15 +6,15 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 18:29:19 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/25 15:40:27 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/09 13:32:41 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
 Cat::Cat() {
-	std::cout << "Cat Default constructor called" << std::endl;
-	this->type = "Cat";
+	std::cout << "Cat Default constructor called" << std::endl << std::endl;
+	this->_type = "Cat";
 }
 
 Cat::Cat(Cat const &src) {
@@ -27,7 +27,7 @@ Cat::~Cat() {
 }
 
 Cat	&Cat::operator=(Cat const &rhs) {
-	this->type = rhs.type;
+	this->_type = rhs.getType();
 	std::cout << "Cat Copy assignment operator called" << std::endl;
 	return (*this);
 }
@@ -39,8 +39,8 @@ void	Cat::makeSound(void) const {
 /*----------------------------------------------------------------------------*/
 
 WrongCat::WrongCat() {
-	std::cout << "WrongCat Default constructor called" << std::endl;
-	this->type = "WrongCat";
+	std::cout << "WrongCat Default constructor called" << std::endl << std::endl;
+	this->_type = "WrongCat";
 }
 
 WrongCat::WrongCat(WrongCat const &src) {
@@ -53,7 +53,7 @@ WrongCat::~WrongCat() {
 }
 
 WrongCat	&WrongCat::operator=(WrongCat const &rhs) {
-	this->type = rhs.type;
+	this->_type = rhs.getType();
 	std::cout << "WrongCat Copy assignment operator called" << std::endl;
 	return (*this);
 }

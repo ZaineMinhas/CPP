@@ -6,13 +6,13 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 18:20:27 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/25 15:40:06 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/09 13:32:08 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 
-Animal::Animal() : type("NONE") {
+Animal::Animal() : _type("NONE") {
 	std::cout << "Animal Default constructor called" << std::endl;
 }
 
@@ -26,13 +26,13 @@ Animal::~Animal() {
 }
 
 Animal	&Animal::operator=(Animal const &rhs) {
-	this->type = rhs.type;
+	this->_type = rhs.getType();
 	std::cout << "Animal Copy assignment operator called" << std::endl;
 	return (*this);
 }
 
 std::string	Animal::getType(void) const {
-	return (this->type);
+	return (this->_type);
 }
 
 void	Animal::makeSound(void) const {
@@ -41,7 +41,7 @@ void	Animal::makeSound(void) const {
 
 /*----------------------------------------------------------------------------*/
 
-WrongAnimal::WrongAnimal() : type("NONE") {
+WrongAnimal::WrongAnimal() : _type("NONE") {
 	std::cout << "WrongAnimal Default constructor called" << std::endl;
 }
 
@@ -55,13 +55,13 @@ WrongAnimal::~WrongAnimal() {
 }
 
 WrongAnimal	&WrongAnimal::operator=(WrongAnimal const &rhs) {
-	this->type = rhs.type;
+	this->_type = rhs.getType();
 	std::cout << "WrongAnimal Copy assignment operator called" << std::endl;
 	return (*this);
 }
 
 std::string	WrongAnimal::getType(void) const {
-	return (this->type);
+	return (this->_type);
 }
 
 void	WrongAnimal::makeSound(void) const {
