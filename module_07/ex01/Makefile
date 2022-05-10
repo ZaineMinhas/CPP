@@ -6,7 +6,7 @@
 #    By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/19 16:14:12 by zminhas           #+#    #+#              #
-#    Updated: 2022/05/10 01:23:32 by zminhas          ###   ########.fr        #
+#    Updated: 2022/05/10 02:20:07 by zminhas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ CXX = 		c++
 
 CFLAGS =	-Wall -Wextra -Werror -std=c++98
 
-NAME =		whatever
+NAME =		iter
 
 SRCS =		main.cpp		\
 
