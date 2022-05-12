@@ -6,55 +6,70 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 04:07:10 by zminhas           #+#    #+#             */
-/*   Updated: 2022/05/11 03:16:44 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/12 01:06:51 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Array.hpp"
 
-int	main(void)
+int	main()
 {
-	Array<int>			IntArray(4);
-	Array<char>			CharArray(6);
-	Array<std::string>	StrArray(2);
+{
+	Array<int> a(5);
+	Array<int> empty;
 
+	std::cout << "a[2] : " << a[2] << std::endl;
+	a[2] = 5;
+	std::cout << "I can change the value of a[2] : " << a[2] << std::endl;
+	Array<int> b(a);
+	std::cout << "If I make a copy of a, the value b[2] is the same : " <<  b[2] << std::endl;
+	b[2] = 19;
+	std::cout << "But if I change b[2] : " <<  b[2] << std::endl;
+	std::cout << "It doesn't change a[2] : " <<  a[2] << std::endl;
+	a = b;
+	std::cout << "The '=' operator can change a : " <<  a[2] << std::endl;
+	std::cout << "The size of a is " <<  a.size() << std::endl;
+	std::cout << "The size of b is " <<  b.size() << std::endl;
+	std::cout << "The size of empty is " <<  empty.size() << std::endl;
+	std::cout << "I can't access out of the array" << std::endl;
 	try
 	{
-		CharArray[10] = 'A';
+		std::cout << a[5] << std::endl;
+		std::cout << "Nervermind." << std::endl;
 	}
-	catch (std::exception &e){
-		std::cout << e.what() << std::endl;
+	catch(const std::exception& e)
+	{
+		std::cout << "You see" << std::endl;
 	}
-	
-	std::cout << std::endl << "--------------------------" << std::endl << std::endl;
-	
-	size_t size = IntArray.size();
-	for (size_t i = 0; i < size; i++)
-		IntArray[i] = 0;
-	IntArray[1] = 42;
-	for (size_t i = 0; i < size; i++)
-		std::cout << "IntArray[" << i << "] : " << IntArray[i] << " | ";
-	std::cout << std::endl;
+}
+std::cout << "--------------" << std::endl;
+{
+	std::cout << "This work also with float" << std::endl;
+	Array<float> a(5);
+	Array<float> empty;
 
-	std::cout << std::endl << "--------------------------" << std::endl << std::endl;
-
-	size = CharArray.size();
-	for (size_t i = 0; i < size; i++)
-		CharArray[i] = 'a';
-	CharArray[3] = 'A';
-	for (size_t i = 0; i < size; i++)
-		std::cout << "CharArray[" << i << "] : " << CharArray[i] << " | ";
-	std::cout << std::endl;
-
-	std::cout << std::endl << "--------------------------" << std::endl << std::endl;
-
-	size = StrArray.size();
-	for (size_t i = 0; i < size; i++)
-		StrArray[i] = "Coucou";
-	StrArray[1] = "Hello";
-	for (size_t i = 0; i < size; i++)
-		std::cout << "StrArray[" << i << "] : " << StrArray[i] << " | ";
-	std::cout << std::endl;
-
-	return (0);
+	std::cout << "a[2] : " << a[2] << std::endl;
+	a[2] = 5.2;
+	std::cout << "I can change the value of a[2] : " << a[2] << std::endl;
+	Array<float> b(a);
+	std::cout << "If I make a copy of a, the value b[2] is the same : " <<  b[2] << std::endl;
+	b[2] = 19.42;
+	std::cout << "But if I change b[2] : " <<  b[2] << std::endl;
+	std::cout << "It doesn't change a[2] : " <<  a[2] << std::endl;
+	a = b;
+	std::cout << "The '=' operator can change a : " <<  a[2] << std::endl;
+	std::cout << "The size of a is " <<  a.size() << std::endl;
+	std::cout << "The size of b is " <<  b.size() << std::endl;
+	std::cout << "The size of empty is " <<  empty.size() << std::endl;
+	std::cout << "I can't access out of the array" << std::endl;
+	try
+	{
+		std::cout << a[5] << std::endl;
+		std::cout << "Nervermind." << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cout << "You see" << std::endl;
+	}
+}
 }
