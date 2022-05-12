@@ -6,7 +6,7 @@
 #    By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/19 16:14:12 by zminhas           #+#    #+#              #
-#    Updated: 2022/05/11 23:31:20 by zminhas          ###   ########.fr        #
+#    Updated: 2022/05/12 05:03:01 by zminhas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,9 +14,10 @@ CXX = 		c++
 
 CFLAGS =	-Wall -Wextra -Werror -std=c++98
 
-NAME =		easyfind
+NAME =		span
 
 SRCS =		main.cpp		\
+			Span.cpp		\
 
 OBJS =		$(SRCS:.cpp=.o)
 

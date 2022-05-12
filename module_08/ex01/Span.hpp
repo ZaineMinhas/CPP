@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 23:52:46 by zminhas           #+#    #+#             */
-/*   Updated: 2022/05/12 01:03:06 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/12 05:18:27 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,17 @@
 # define SPAN_HPP
 
 # include <iostream>
+# include <exception>
+# include <list>
+# include <vector>
+# include <algorithm>
 
 class Span
 {
 private:
-	int	*_array;
-	
+	std::list<int>	_lst;
+	int	_size;
+
 public:
 	Span(void);
 	Span(const unsigned int N);
@@ -27,8 +32,14 @@ public:
 	~Span(void);
 
 	Span	&operator=(const Span &rhs);
+	int		&operator[](const unsigned int index) const;
 
-	
+	std::list<int>	getLst(void) const;
+	int				get(unsigned int index) const;
+
+	void	addNumber(int nb);
+	int		shortestSpan(void) const;
+	int		longestSpan(void) const;
 
 };
 
