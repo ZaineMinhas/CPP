@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 05:01:16 by zminhas           #+#    #+#             */
-/*   Updated: 2022/05/12 05:11:45 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/12 20:40:33 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,15 +23,19 @@ int main()
 		sp.addNumber(9);
 		sp.addNumber(11);
 
-		std::cout << sp.shortestSpan() << std::endl;
-		std::cout << sp.longestSpan() << std::endl;
+		Span sp2 = sp;
+
+		std::cout << "shortest span : " << sp2.shortestSpan() << std::endl;
+		std::cout << "longest span : " << sp2.longestSpan() << std::endl;
 	}
-	/*{
+	std::cout << "-------------------" << std::endl;
+	{
 		Span sp = Span(10000);
 
 		for (int i = 0; i < 10000; i++)
 			sp.addNumber(i);
-		std::cout << sp.shortestSpan() << std::endl;
-		std::cout << sp.longestSpan() << std::endl;
-	}*/
+		std::cout << "shortest span : " << sp.shortestSpan() << std::endl;
+		std::cout << "longest span : " << sp.longestSpan() << std::endl;
+	}
+	//system("leaks span");
 }

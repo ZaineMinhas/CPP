@@ -6,30 +6,31 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 23:52:50 by zminhas           #+#    #+#             */
-/*   Updated: 2022/05/12 05:20:00 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/12 20:39:35 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Span.hpp"
 
-Span::Span() : _size(0) {}
+Span::Span() : _size(0), _added(0) {}
 
-Span::Span(const unsigned int N) : _size(N) {}
+Span::Span(const unsigned int N) : _size(N), _added(0) {}
 
-//Span::Span(const Span &src) {}
+Span::Span(const Span &src) { *this = src; }
 
-Span::~Span() {}
+Span::~Span() { this->_lst.erase(this->_lst.begin(), this->_lst.end()); }
 
-// Span	&Span::operator=(const Span &rhs) 
-// {	
-// 	return (*this);
-// }
-
-int		&Span::operator[](const unsigned int index) const { return (this->get(index)); } // a continuer !
+Span	&Span::operator=(const Span &rhs) 
+{
+	this->_lst.erase(this->_lst.begin(), this->_lst.end());
+	for (int i = 0; i < this->_size; i++)
+		this->_lst.push_back(rhs.getValue(i));
+	return (*this);
+}
 
 std::list<int>	Span::getLst(void) const { return (this->_lst); }
 
-int	Span::get(unsigned int index) const
+int	Span::getValue(unsigned int index) const
 {
 	if (index >= this->_lst.size())
 		throw (std::out_of_range("index out of range"));
@@ -42,12 +43,10 @@ int	Span::get(unsigned int index) const
 
 void	Span::addNumber(int nb)
 {
-	static int added;
-
-	if (added >= this->_size)
+	if (this->_added >= this->_size)
 		throw (std::exception());
 	this->_lst.push_back(nb);
-	added++;
+	this->_added++;
 }
 
 int		Span::shortestSpan(void) const
@@ -60,7 +59,7 @@ int		Span::shortestSpan(void) const
 	std::list<int>::iterator it2 = tmp.begin();
 	it2++;
 	int	compare = longestSpan();
-	for (int i = 0; i < this->_size; i++)
+	for (int i = 0; i < this->_size - 1; i++)
 	{
 		if (*it2 - *it1 < compare)
 			compare = *it2 - *it1;
@@ -76,5 +75,16 @@ int		Span::longestSpan(void) const
 		throw (std::exception());
 	std::list<int>	tmp = this->_lst;
 	tmp.sort();
-	return (*tmp.end() - *tmp.begin());
+	std::list<int>::iterator	it = tmp.begin();
+	int	biggest;
+	int	smalest;
+	for (int i = 0; i < this->_size; i++)
+	{
+		if (!i)
+			smalest = *it;
+		else if (i == this->_size - 1)
+			biggest = *it;
+		it++;
+	}
+	return (biggest - smalest);
 }
