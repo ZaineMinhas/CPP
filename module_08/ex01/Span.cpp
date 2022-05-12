@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 23:52:50 by zminhas           #+#    #+#             */
-/*   Updated: 2022/05/12 20:39:35 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/12 23:36:01 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,12 @@ Span::~Span() { this->_lst.erase(this->_lst.begin(), this->_lst.end()); }
 
 Span	&Span::operator=(const Span &rhs) 
 {
-	this->_lst.erase(this->_lst.begin(), this->_lst.end());
-	for (int i = 0; i < this->_size; i++)
+	std::list<int>::iterator	it = this->_lst.begin();
+	while (it++ != this->_lst.end())
+		this->_lst.pop_back();
+	this->_added = rhs.getAdded();
+	this->_size = rhs.getSize();
+	for (int i = 0; i < this->_added; i++)
 		this->_lst.push_back(rhs.getValue(i));
 	return (*this);
 }
@@ -40,6 +44,10 @@ int	Span::getValue(unsigned int index) const
 		it++;
 	return (*it);
 }
+
+int	Span::getSize(void) const { return (this->_size); }
+
+int	Span::getAdded(void) const { return (this->_added); }
 
 void	Span::addNumber(int nb)
 {

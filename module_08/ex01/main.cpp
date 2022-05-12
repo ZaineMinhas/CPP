@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 05:01:16 by zminhas           #+#    #+#             */
-/*   Updated: 2022/05/12 20:40:33 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/12 23:33:56 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,17 @@ int main()
 		sp.addNumber(9);
 		sp.addNumber(11);
 
-		Span sp2 = sp;
+		Span sp2(sp);
 
-		std::cout << "shortest span : " << sp2.shortestSpan() << std::endl;
-		std::cout << "longest span : " << sp2.longestSpan() << std::endl;
+		try
+		{
+			std::cout << "shortest span : " << sp2.shortestSpan() << std::endl;
+			std::cout << "longest span : " << sp2.longestSpan() << std::endl;
+		}
+		catch(const std::exception& e)
+		{
+			std::cerr << e.what() << std::endl;
+		}
 	}
 	std::cout << "-------------------" << std::endl;
 	{
@@ -34,8 +41,14 @@ int main()
 
 		for (int i = 0; i < 10000; i++)
 			sp.addNumber(i);
-		std::cout << "shortest span : " << sp.shortestSpan() << std::endl;
-		std::cout << "longest span : " << sp.longestSpan() << std::endl;
+		try
+		{
+			std::cout << "shortest span : " << sp.shortestSpan() << std::endl;
+			std::cout << "longest span : " << sp.longestSpan() << std::endl;
+		}
+		catch(const std::exception& e)
+		{
+			std::cerr << e.what() << std::endl;
+		}
 	}
-	//system("leaks span");
 }

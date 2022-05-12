@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 23:52:46 by zminhas           #+#    #+#             */
-/*   Updated: 2022/05/12 20:28:14 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/12 23:20:35 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ public:
 
 	std::list<int>	getLst(void) const;
 	int				getValue(unsigned int index) const;
+	int				getAdded(void) const;
+	int				getSize(void) const;
 
 	void	addNumber(int nb);
 	int		shortestSpan(void) const;
