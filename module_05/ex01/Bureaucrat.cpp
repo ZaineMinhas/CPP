@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 16:36:39 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/27 17:06:21 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/13 16:19:02 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,17 +43,21 @@ int		Bureaucrat::getGrade(void) const {
 
 void	Bureaucrat::incGrade(void)
 {
-	this->_grade--;
-	if (this->_grade < 1)
+	if (this->_grade == 1)
 		throw (Bureaucrat::GradeTooHighException());
+	this->_grade--;
 }
 
 void	Bureaucrat::decGrade(void)
 {
-	this->_grade++;
-	if (this->_grade > 150)
+	if (this->_grade == 150)
 		throw (Bureaucrat::GradeTooLowException());
+	this->_grade++;
 }
+
+const char	*Bureaucrat::GradeTooHighException::what() const throw() { return ("grade is too high"); }
+
+const char	*Bureaucrat::GradeTooLowException::what() const throw() { return ("grade is too low"); }
 
 void	Bureaucrat::signForm(Form &form)
 {

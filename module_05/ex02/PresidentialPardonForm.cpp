@@ -6,13 +6,13 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 17:56:51 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/25 15:38:42 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/13 16:35:49 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PresidentialPardonForm.hpp"
 
-PresidentialPardonForm::PresidentialPardonForm() : Form("NONE", "NONE", 25, 5) {}
+PresidentialPardonForm::PresidentialPardonForm() : Form("PresidentialPardonForm", "NONE", 25, 5) {}
 
 PresidentialPardonForm::PresidentialPardonForm(const std::string target) : Form("PresidentialPardonForm", target, 25, 5) {}
 

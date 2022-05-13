@@ -6,13 +6,13 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 17:22:39 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/25 15:38:58 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/13 16:36:05 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
 
-RobotomyRequestForm::RobotomyRequestForm() : Form("NONE", "NONE", 72, 45) {}
+RobotomyRequestForm::RobotomyRequestForm() : Form("RobotomyRequestForm", "NONE", 72, 45) {}
 
 RobotomyRequestForm::RobotomyRequestForm(const std::string target) : Form("RobotomyRequestForm", target, 72, 45) {}
 
