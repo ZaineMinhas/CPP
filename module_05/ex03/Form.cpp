@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 19:05:48 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/27 17:08:04 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/13 18:50:52 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,12 @@ void	Form::execute(Bureaucrat const &executor) const
 	else
 		this->exec_form(executor);
 }
+
+const char	*Form::GradeTooHighException::what() const throw() { return ("garde is too high"); }
+
+const char	*Form::GradeTooLowException::what() const throw() { return ("garde is too low"); }
+
+const char	*Form::NotSignedException::what() const throw() { return ("not signed"); }
 
 std::ostream	&operator<<(std::ostream &os, Form const &lhs) {
 	os << lhs.getName() << ", form grade " << lhs.getGrade();

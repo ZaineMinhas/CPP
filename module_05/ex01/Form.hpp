@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 18:50:29 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/25 15:37:02 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/13 18:47:09 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,16 +42,12 @@ public:
 
 	class GradeTooHighException : public std::exception {
 	public:
-		virtual const char		*what() const throw() {
-			return ("garde is too high");
-		}
+		virtual const char		*what() const throw();
 	};
 
 	class GradeTooLowException : public std::exception {
 	public:
-		virtual const char		*what() const throw() {
-			return ("garde is too low");
-		}
+		virtual const char		*what() const throw();
 	};
 };
 
