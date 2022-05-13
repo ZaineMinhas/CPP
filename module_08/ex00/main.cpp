@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 23:08:57 by zminhas           #+#    #+#             */
-/*   Updated: 2022/05/11 23:09:45 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/13 00:56:36 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ int main()
 		}
 	}
 	{
-		std::vector<int>	lst;
+		std::list<int>	lst;
 		
 		lst.push_back(1);
 		lst.push_back(42);

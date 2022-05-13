@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 05:01:16 by zminhas           #+#    #+#             */
-/*   Updated: 2022/05/12 23:33:56 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/13 01:51:22 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,12 +37,18 @@ int main()
 	}
 	std::cout << "-------------------" << std::endl;
 	{
-		Span sp = Span(10000);
+		Span sp = Span(100);
 
-		for (int i = 0; i < 10000; i++)
-			sp.addNumber(i);
+		iter start	= sp.getLst().begin();
+		iter end	= sp.getLst().end();
+		sp.addNumber(start, end);
 		try
 		{
+			for (int i = 0; i < sp.getAdded(); i++)
+			{
+				std::cout << sp.getValue(i) << " ,";
+			}
+			std::cout << std::endl;
 			std::cout << "shortest span : " << sp.shortestSpan() << std::endl;
 			std::cout << "longest span : " << sp.longestSpan() << std::endl;
 		}

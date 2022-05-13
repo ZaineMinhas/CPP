@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 23:52:46 by zminhas           #+#    #+#             */
-/*   Updated: 2022/05/12 23:20:35 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/13 00:56:57 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 # include <list>
 # include <vector>
 # include <algorithm>
+
+typedef std::list<int>::iterator	iter;
 
 class Span
 {
@@ -41,6 +43,7 @@ public:
 	int				getSize(void) const;
 
 	void	addNumber(int nb);
+	void	addNumber(iter start, iter end);
 	int		shortestSpan(void) const;
 	int		longestSpan(void) const;
 
