@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 19:05:48 by zminhas           #+#    #+#             */
-/*   Updated: 2022/05/13 18:51:01 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/16 20:19:33 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,10 @@
 Form::Form() : _name("NONE"), _target("NONE"), _signed(0), _grade(150), _exec_garde(150) {}
 
 Form::Form(std::string name, std::string target, int grade, int exec) : _name(name), _target(target), _signed(0), _grade(grade), _exec_garde(exec) {
-	if (_grade < 1)
+	if (_grade < 1 || _exec_garde < 1)
 		throw (GradeTooHighException());
-	else if (_grade > 150)
+	else if (_grade > 150 || _exec_garde > 150)
 		throw (GradeTooLowException());
-	(void)_exec_garde;
 }
 
 Form::Form(Form const &src) : _name(src.getName()), _signed(src.getSigned()), _grade(src.getGrade()), _exec_garde(src.getExecGrade()) {}
