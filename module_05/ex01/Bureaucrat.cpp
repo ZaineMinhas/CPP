@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 16:36:39 by zminhas           #+#    #+#             */
-/*   Updated: 2022/05/13 16:19:02 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/16 16:06:09 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ void	Bureaucrat::signForm(Form &form)
 		}
 		catch(const std::exception& e)
 		{
-			std::cout << this->getName() << " couldn't sign " << form.getName() << " because grade is too low" << std::endl;
+			std::cout << this->getName() << " couldn't sign " << form.getName() << " because : " << e.what() << std::endl;
 		}
 	}
 }

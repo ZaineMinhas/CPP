@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 17:49:51 by zminhas           #+#    #+#             */
-/*   Updated: 2022/04/25 19:13:47 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/16 16:37:28 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,21 +28,21 @@ Intern	&Intern::operator=(const Intern &rhs) {
 Form	*Intern::makePresidentialPardonForm(const std::string target)
 {
 	Form	*f = new PresidentialPardonForm(target);
-	std::cout << f->getName() << " has been created" << std::endl;
+	std::cout << "Intern creates " << f->getName() << std::endl;
 	return (f);
 }
 
 Form	*Intern::makeRobotomyRequestForm(const std::string target)
 {
 	Form	*f = new RobotomyRequestForm(target);
-	std::cout << f->getName() << " has been created" << std::endl;
+	std::cout << "Intern creates " << f->getName() << std::endl;
 	return (f);
 }
 
 Form	*Intern::makeShrubberyCreationForm(const std::string target)
 {
 	Form	*f = new ShrubberyCreationForm(target);
-	std::cout << f->getName() << " has been created" << std::endl;
+	std::cout << "Intern creates " << f->getName() << std::endl;
 	return (f);
 }
 

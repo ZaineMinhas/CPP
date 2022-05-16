@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 17:22:39 by zminhas           #+#    #+#             */
-/*   Updated: 2022/05/13 16:36:05 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/16 16:25:46 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,15 @@ RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &src) : Form(
 RobotomyRequestForm::~RobotomyRequestForm() {}
 
 RobotomyRequestForm	&RobotomyRequestForm::operator=(const RobotomyRequestForm &rhs) {
-    Form::operator=(rhs);
-    return (*this);
+	Form::operator=(rhs);
+	return (*this);
 }
 
-void    RobotomyRequestForm::exec_form(const Bureaucrat &executor) const
+void	RobotomyRequestForm::exec_form(const Bureaucrat &executor) const
 {
-    (void)executor;
-    if (rand() % 2)
-        std::cout << "* some drill noise *" << std::endl << this->getTarget() << " being succesfully robotomised" << std::endl;
-    else
-        std::cout << "* some drill noise *" << std::endl << "Robotomisation failed." << std::endl;
+	(void)executor;
+	if (rand() % 2)
+		std::cout << "* some drill noise *" << std::endl << this->getTarget() << " being succesfully robotomised" << std::endl;
+	else
+		std::cout << "* some drill noise *" << std::endl << "Robotomisation failed." << std::endl;
 }
