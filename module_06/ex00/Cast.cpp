@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 18:13:21 by zminhas           #+#    #+#             */
-/*   Updated: 2022/05/17 16:29:40 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/17 20:01:26 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,9 @@ bool	Cast::isInt(void) const
 	{
 		if (!i && (this->_arg[i] == '+' || this->_arg[i] == '-'))
 			i++;
-		else if (!(this->_arg[i] >= '0' && this->_arg[i] <= '9'))
+		if (!this->_arg[i])
+			return (false);
+		if (!(this->_arg[i] >= '0' && this->_arg[i] <= '9'))
 			return (false);
 	}
 	return (true);
@@ -81,9 +83,11 @@ bool	Cast::isFloat(void) const
 	int	dot = 0;
 	for (size_t i = 0; i < this->_arg.length(); i++)
 	{
-		if (!i && ((this->_arg[i] != '+' || this->_arg[i] != '-') && (this->_arg[i] < '0' && this->_arg[i] > '9')))
+		if (!i && (this->_arg[i] != '+' && this->_arg[i] != '-') && !(this->_arg[i] >= '0' && this->_arg[i] <= '9'))
 			return (false);
-		if (i == this->_arg.length() - 1 && this->_arg[i] == 'f')
+		if (!i && (this->_arg[i] == '+' || this->_arg[i] == '-') && !(this->_arg[i + 1] >= '0' && this->_arg[i + 1] <= '9'))
+			return (false);
+		if ((i == this->_arg.length() - 1 && this->_arg[i] == 'f') && (this->_arg.length() - 2 && this->_arg[i - 1] != '.'))
 			return (true);
 		else if (i && !(this->_arg[i] >= '0' && this->_arg[i] <= '9'))
 		{
@@ -105,7 +109,11 @@ bool	Cast::isDouble(void) const
 	int	dot = 0;
 	for (size_t i = 0; i < this->_arg.length(); i++)
 	{
-		if (!i && (this->_arg[i] != '+' || this->_arg[i] != '-') && (this->_arg[i] < '0' && this->_arg[i] > '9'))
+		if (!i && (this->_arg[i] != '+' && this->_arg[i] != '-') && !(this->_arg[i] >= '0' && this->_arg[i] <= '9'))
+			return (false);
+		if (!i && (this->_arg[i] == '+' || this->_arg[i] == '-') && !(this->_arg[i + 1] >= '0' && this->_arg[i + 1] <= '9'))
+			return (false);
+		if (i == this->_arg.length() - 1 && this->_arg[i] == '.')
 			return (false);
 		else if (i && !(this->_arg[i] >= '0' && this->_arg[i] <= '9'))
 		{
@@ -131,26 +139,10 @@ void	Cast::castChar(void) {
 	this->_double = static_cast<double>(this->_cast);
 }
 
-void	Cast::castInt(void) {
+void	Cast::castOther(void) {
 	this->_cast = atof(this->_arg.c_str());
 	this->_int = static_cast<int>(this->_cast);
 	this->_char = static_cast<char>(this->_cast);
 	this->_float = static_cast<float>(this->_cast);
 	this->_double = static_cast<float>(this->_cast);
-}
-
-void	Cast::castFloat(void) {
-	this->_cast = atof(this->_arg.c_str());
-	this->_float = static_cast<float>(this->_cast);
-	this->_int = static_cast<int>(this->_cast);
-	this->_char = static_cast<char>(this->_cast);
-	this->_double = static_cast<double>(this->_cast);
-}
-
-void	Cast::castDouble(void) {
-	this->_cast = atof(this->_arg.c_str());
-	this->_double = this->_cast;
-	this->_int = static_cast<int>(this->_double);
-	this->_float = static_cast<float>(this->_double);
-	this->_char = static_cast<char>(this->_double);
 }

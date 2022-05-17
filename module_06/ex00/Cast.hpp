@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 18:13:18 by zminhas           #+#    #+#             */
-/*   Updated: 2022/05/01 16:35:01 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/17 19:41:12 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,9 +46,7 @@ public:
 	bool	isDouble(void) const;
 
 	void	castChar(void);
-	void	castInt(void);
-	void	castFloat(void);
-	void	castDouble(void);
+	void	castOther(void);
 };
 
 #endif
