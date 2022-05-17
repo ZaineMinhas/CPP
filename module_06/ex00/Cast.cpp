@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 18:13:21 by zminhas           #+#    #+#             */
-/*   Updated: 2022/05/01 16:10:55 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/17 16:29:40 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,11 +81,11 @@ bool	Cast::isFloat(void) const
 	int	dot = 0;
 	for (size_t i = 0; i < this->_arg.length(); i++)
 	{
-		if (!i && (this->_arg[i] != '+' || this->_arg[i] != '-') && !(this->_arg[i] >= '0' && this->_arg[i] <= '9'))
+		if (!i && ((this->_arg[i] != '+' || this->_arg[i] != '-') && (this->_arg[i] < '0' && this->_arg[i] > '9')))
 			return (false);
 		if (i == this->_arg.length() - 1 && this->_arg[i] == 'f')
 			return (true);
-		else if (!(this->_arg[i] >= '0' && this->_arg[i] <= '9'))
+		else if (i && !(this->_arg[i] >= '0' && this->_arg[i] <= '9'))
 		{
 			if (this->_arg[i] == '.')
 				dot++;
@@ -105,9 +105,9 @@ bool	Cast::isDouble(void) const
 	int	dot = 0;
 	for (size_t i = 0; i < this->_arg.length(); i++)
 	{
-		if (!i && (this->_arg[i] != '+' || this->_arg[i] != '-') && !(this->_arg[i] >= '0' && this->_arg[i] <= '9'))
+		if (!i && (this->_arg[i] != '+' || this->_arg[i] != '-') && (this->_arg[i] < '0' && this->_arg[i] > '9'))
 			return (false);
-		else if (!(this->_arg[i] >= '0' && this->_arg[i] <= '9'))
+		else if (i && !(this->_arg[i] >= '0' && this->_arg[i] <= '9'))
 		{
 			if (this->_arg[i] == '.')
 				dot++;
