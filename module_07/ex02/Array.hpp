@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 04:06:21 by zminhas           #+#    #+#             */
-/*   Updated: 2022/05/12 02:14:44 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/18 16:43:09 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,8 @@ public:
 	~Array(void) { delete [] this->_array; }
 
 	Array	&operator=(const Array &rhs) {
-		//this->_size = rhs.size();
 		delete this->_array;
+		this->_size = rhs.size();
 		this->_array = new T[rhs.size()];
 		for (unsigned int i = 0; i < rhs.size(); i++)
 			this->_array[i] = rhs.getArray()[i];
