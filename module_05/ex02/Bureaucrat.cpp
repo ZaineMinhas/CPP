@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 16:36:39 by zminhas           #+#    #+#             */
-/*   Updated: 2022/05/13 16:19:10 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/18 17:47:20 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,7 @@ Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name) {
 	this->_grade = grade;
 }
 
-Bureaucrat::Bureaucrat(Bureaucrat const &src) {
-	*this = src;
-}
+Bureaucrat::Bureaucrat(Bureaucrat const &src) : _name(src.getName()), _grade(src.getGrade()) {}
 
 Bureaucrat::~Bureaucrat() {}
 

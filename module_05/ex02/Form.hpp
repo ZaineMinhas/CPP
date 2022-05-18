@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 18:50:29 by zminhas           #+#    #+#             */
-/*   Updated: 2022/05/13 18:50:15 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/18 17:50:05 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ public:
 	Form();
 	Form(std::string name, std::string target, int grade, int exec);
 	Form(Form const &src);
-	~Form();
+	virtual ~Form();
 
 	Form	&operator=(Form const &rhs);
 
