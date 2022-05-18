@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 18:26:13 by zminhas           #+#    #+#             */
-/*   Updated: 2022/05/13 00:56:36 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/18 19:57:16 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,12 @@
 # include <list>
 
 template<typename T>
-bool	easyfind(const T &container, const int to_find)
+typename T::iterator	easyfind(T &container, int to_find)
 {
-	return (*std::find(container.begin(), container.end(), to_find) == to_find ? true : false);
+	typename T::iterator it = std::find(container.begin(), container.end(), to_find);
+	if (*it == to_find)
+		return (it);
+	throw (std::exception());
 }
 
 #endif
