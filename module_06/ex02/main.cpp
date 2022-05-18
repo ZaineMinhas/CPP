@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/01 19:14:38 by zminhas           #+#    #+#             */
-/*   Updated: 2022/05/05 17:45:17 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/18 16:11:11 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,20 @@ Base	*generate(void)
 	int	nb = rand() % 3;
 
 	if (!nb)
+	{
+		std::cout << "returned : A" << std::endl;
 		return (new A);
+	}
 	else if (nb == 1)
+	{
+		std::cout << "returned : B" << std::endl;
 		return (new B);
+	}
 	else
+	{
+		std::cout << "returned : C" << std::endl;
 		return (new C);
+	}
 }
 
 void	identify(Base* p)
@@ -104,5 +113,12 @@ int		main(void)
 	identify(base7);
 	identify(*base7);
 
+	delete base1;
+	delete base2;
+	delete base3;
+	delete base4;
+	delete base5;
+	delete base6;
+	delete base7;
 	return (0);
 }
