@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 18:13:21 by zminhas           #+#    #+#             */
-/*   Updated: 2022/05/17 20:01:26 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/19 16:14:06 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -144,5 +144,5 @@ void	Cast::castOther(void) {
 	this->_int = static_cast<int>(this->_cast);
 	this->_char = static_cast<char>(this->_cast);
 	this->_float = static_cast<float>(this->_cast);
-	this->_double = static_cast<float>(this->_cast);
+	this->_double = static_cast<double>(this->_cast);
 }
