@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 23:52:46 by zminhas           #+#    #+#             */
-/*   Updated: 2022/05/23 16:31:52 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/23 17:37:36 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,12 @@ typedef std::list<int>::iterator	iter;
 class Span
 {
 private:
-	std::list<int>	_lst;
+	Span(void);
+
+	std::list<int>	*_lst;
 	unsigned long	_size;
 
 public:
-	Span(void);
 	Span(const unsigned int N);
 	Span(const Span &src);
 	~Span(void);
@@ -36,7 +37,7 @@ public:
 	Span	&operator=(const Span &rhs);
 	int		&operator[](const unsigned int index) const;
 
-	std::list<int>	getLst(void) const;
+	std::list<int>	*getLst(void) const;
 	int				getValue(unsigned int index) const;
 	int				getSize(void) const;
 

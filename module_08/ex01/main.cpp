@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 05:01:16 by zminhas           #+#    #+#             */
-/*   Updated: 2022/05/23 16:59:45 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/23 18:07:51 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int main()
 {
 	std::cout << "-----/ Test 1 /-----" << std::endl;
 
-	try		/* Test 1 */
+	try
 	{
 		Span	sp(3);
 		sp.addNumber(1);
@@ -36,9 +36,10 @@ int main()
 	{
 		Span	sp(10);
 		sp.addNumber(5);
-		//sp.addNumber(10);
+		// sp.addNumber(10);
 		std::cout << "shortest span : " << sp.shortestSpan() << std::endl;
 		std::cout << "longest span : " << sp.longestSpan() << std::endl;
+		std::cout << "it's works !" << std::endl;
 	}
 	catch(const std::exception& e)
 	{
@@ -48,7 +49,7 @@ int main()
 
 	std::cout << std::endl << "-----/ Test 3 /-----" << std::endl;
 
-	try		/* Test 3 */
+	try
 	{
 		Span	sp = Span(10);
 		sp.addNumber(5);
@@ -68,25 +69,25 @@ int main()
 
 	std::cout << std::endl << "-----/ Test 4 /-----" << std::endl;
 
-	/*{
-		Span sp = Span(100);
+	try
+	{
+		int size = 17500;
 
-		iter start	= sp.getLst().begin();
-		iter end	= sp.getLst().end();
-		sp.addNumber(start, end);
-		try
-		{
-			for (unsigned long i = 0; i < sp.getLst().size(); i++)
-			{
-				std::cout << sp.getValue(i) << " | ";
-			}
-			std::cout << std::endl;
-			std::cout << "shortest span : " << sp.shortestSpan() << std::endl;
-			std::cout << "longest span : " << sp.longestSpan() << std::endl;
-		}
-		catch(const std::exception& e)
-		{
-			std::cerr << e.what() << std::endl;
-		}
-	}*/
+		Span sp(size);
+		for (int i = 0; i < size; i++)
+			sp.addNumber(i);
+		iter start	= sp.getLst()->begin();
+		iter end	= sp.getLst()->end();
+		Span	sp2(size);
+		sp2.addNumber(start, end);
+		// for (unsigned long i = 0; i < sp.getLst()->size(); i++)
+		// 	std::cout << sp2.getValue(i) << " | ";
+		// std::cout << std::endl;
+		std::cout << "shortest span : " << sp2.shortestSpan() << std::endl;
+		std::cout << "longest span : " << sp2.longestSpan() << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
 }
