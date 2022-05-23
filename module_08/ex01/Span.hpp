@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 23:52:46 by zminhas           #+#    #+#             */
-/*   Updated: 2022/05/13 00:56:57 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/23 16:31:52 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,7 @@ class Span
 {
 private:
 	std::list<int>	_lst;
-	int				_size;
-	int				_added;
+	unsigned long	_size;
 
 public:
 	Span(void);
@@ -39,7 +38,6 @@ public:
 
 	std::list<int>	getLst(void) const;
 	int				getValue(unsigned int index) const;
-	int				getAdded(void) const;
 	int				getSize(void) const;
 
 	void	addNumber(int nb);
