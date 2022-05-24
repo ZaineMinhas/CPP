@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 23:08:57 by zminhas           #+#    #+#             */
-/*   Updated: 2022/05/18 20:02:01 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/24 16:54:37 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ int main()
 	}
 	std::cout << std::endl <<  "TEST 3" << std::endl;
 	{
-		std::list<char>	lst;
+		std::vector<char>	lst;
 		
 		lst.push_back('a');
 		lst.push_back('b');
@@ -73,6 +73,18 @@ int main()
 		catch (std::exception & e)
 		{
 			std::cout << "not finded" << std::endl;
+		}
+	}
+	std::cout << std::endl <<  "TEST 4" << std::endl;
+	{
+		std::vector<int>	lst;
+		try
+		{
+			std::cout << *easyfind(lst, 3) << std::endl;
+		}
+		catch (std::exception &e)
+		{
+			std::cout << "empty container" << std::endl;
 		}
 	}
 }
