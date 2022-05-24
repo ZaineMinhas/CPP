@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 23:52:50 by zminhas           #+#    #+#             */
-/*   Updated: 2022/05/23 18:05:04 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/24 16:32:20 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,10 +60,7 @@ void	Span::addNumber(iter start, iter end)
 {
 	srand(time(NULL));
 	while (start++ != end)
-	{
-		//std::cout << "tour" << std::endl;
 		addNumber(rand());
-	}
 }
 
 int		Span::shortestSpan(void) const
@@ -75,7 +72,7 @@ int		Span::shortestSpan(void) const
 	iter	it1 = tmp->begin();
 	iter	it2 = tmp->begin();
 	it2++;
-	int	compare = longestSpan();
+	int	compare = INT_MAX;
 	for (unsigned long i = 0; i < this->_lst->size() - 1; i++)
 	{
 		if (*it2 - *it1 < compare)
@@ -92,16 +89,8 @@ int		Span::longestSpan(void) const
 		throw (std::exception());
 	std::list<int>	*tmp(this->_lst);
 	tmp->sort();
-	iter	it = tmp->begin();
-	int	biggest;
-	int	smalest;
-	for (unsigned long i = 0; i < this->_lst->size(); i++)
-	{
-		if (!i)
-			smalest = *it;
-		else if (i == this->_lst->size() - 1)
-			biggest = *it;
-		it++;
-	}
+	int	smalest = tmp->front();
+	tmp->reverse();
+	int	biggest = tmp->front();
 	return (biggest - smalest);
 }
