@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 23:52:46 by zminhas           #+#    #+#             */
-/*   Updated: 2022/05/24 16:37:58 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/24 17:05:52 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,9 @@
 
 # include <iostream>
 # include <exception>
-# include <list>
 # include <limits.h>
+# include <algorithm>
+# include <list>
 
 typedef std::list<int>::iterator	iter;
 

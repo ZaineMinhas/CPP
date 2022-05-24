@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 23:52:50 by zminhas           #+#    #+#             */
-/*   Updated: 2022/05/24 16:32:20 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/24 17:34:01 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ int		Span::shortestSpan(void) const
 	iter	it1 = tmp->begin();
 	iter	it2 = tmp->begin();
 	it2++;
-	int	compare = INT_MAX;
+	int	compare = *std::max_element(tmp->begin(), tmp->end());
 	for (unsigned long i = 0; i < this->_lst->size() - 1; i++)
 	{
 		if (*it2 - *it1 < compare)
@@ -87,10 +87,7 @@ int		Span::longestSpan(void) const
 {
 	if (this->_lst->size() < 2)
 		throw (std::exception());
-	std::list<int>	*tmp(this->_lst);
-	tmp->sort();
-	int	smalest = tmp->front();
-	tmp->reverse();
-	int	biggest = tmp->front();
+	int	smalest = *std::min_element(this->_lst->begin(), this->_lst->end());
+	int	biggest = *std::max_element(this->_lst->begin(), this->_lst->end());
 	return (biggest - smalest);
 }
