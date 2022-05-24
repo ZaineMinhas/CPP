@@ -6,7 +6,7 @@
 /*   By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 18:26:13 by zminhas           #+#    #+#             */
-/*   Updated: 2022/05/24 16:53:27 by zminhas          ###   ########.fr       */
+/*   Updated: 2022/05/24 16:57:21 by zminhas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <iostream>
 # include <exception>
-# include <list>
+# include <algorithm>
 # include <array>
 # include <list>
 # include <vector>
