@@ -6,13 +6,13 @@
 #    By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/22 19:33:31 by zminhas           #+#    #+#              #
-#    Updated: 2022/03/23 19:02:53 by zminhas          ###   ########.fr        #
+#    Updated: 2022/09/23 14:48:13 by zminhas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CXX = 		c++
 
-CFLAGS =	-Wall -Wextra -Werror -std=c++98
+CXXFLAGS =	-Wall -Wextra -Werror -std=c++98
 
 NAME =		fixed
 
@@ -23,18 +23,18 @@ SRCS =		main.cpp			\
 OBJS =		$(SRCS:.cpp=.o)
 
 .cpp.o:
-			$(CXX) $(CFLAGS) -c -I ./ $< -o $(<:.cpp=.o)
+			$(CXX) $(CXXFLAGS) -c -I ./ $< -o $(<:.cpp=.o)
 
 all : 		$(NAME)
 
 $(NAME):	$(OBJS)
-			$(CXX) $(CFLAGS) -o $(NAME) $(OBJS)
+			$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
 
 clean:
-			rm -f $(OBJS) $(OB)
+			rm -f $(OBJS)
 
 fclean: 	clean
-			rm -f $(NAME) $(OB)
+			rm -f $(NAME)
 
 re: 		fclean all
 

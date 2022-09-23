@@ -6,13 +6,13 @@
 #    By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/19 16:14:12 by zminhas           #+#    #+#              #
-#    Updated: 2022/05/23 18:57:51 by zminhas          ###   ########.fr        #
+#    Updated: 2022/09/23 14:52:40 by zminhas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CXX = 		c++
 
-CFLAGS =	-Wall -Wextra -Werror -std=c++98
+CXXFLAGS =	-Wall -Wextra -Werror -std=c++98
 
 NAME =		iterator
 
@@ -21,18 +21,18 @@ SRCS =		main.cpp		\
 OBJS =		$(SRCS:.cpp=.o)
 
 .cpp.o:
-			$(CXX) $(CFLAGS) -c -I ./ $< -o $(<:.cpp=.o)
+			$(CXX) $(CXXFLAGS) -c -I ./ $< -o $(<:.cpp=.o)
 
 all : 		$(NAME)
 
 $(NAME):	$(OBJS)
-			$(CXX) $(CFLAGS) -o $(NAME) $(OBJS)
+			$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
 
 clean:
-			rm -f $(OBJS) $(OB)
+			rm -f $(OBJS)
 
 fclean: 	clean
-			rm -f $(NAME) $(OB)
+			rm -f $(NAME)
 
 re: 		fclean all
 

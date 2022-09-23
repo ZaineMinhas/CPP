@@ -6,13 +6,13 @@
 #    By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/21 19:46:39 by zminhas           #+#    #+#              #
-#    Updated: 2022/03/23 19:02:28 by zminhas          ###   ########.fr        #
+#    Updated: 2022/09/23 14:47:28 by zminhas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CXX = 		c++
 
-CFLAGS =	-Wall -Wextra -Werror -std=c++98
+CXXFLAGS =	-Wall -Wextra -Werror -std=c++98
 
 NAME =		karenFilter
 
@@ -22,12 +22,12 @@ SRCS =		main.cpp	\
 OBJS =		$(SRCS:.cpp=.o)
 
 .cpp.o:
-			$(CXX) $(CFLAGS) -c -I ./ $< -o $(<:.cpp=.o)
+			$(CXX) $(CXXFLAGS) -c -I ./ $< -o $(<:.cpp=.o)
 
 all : 		$(NAME)
 
 $(NAME):	$(OBJS)
-			$(CXX) $(CFLAGS) -o $(NAME) $(OBJS)
+			$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
 
 clean:
 			rm -f $(OBJS) $(OB)
