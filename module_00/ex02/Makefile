@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: zminhas <zminhas@student.42.fr>            +#+  +:+       +#+         #
+#    By: zminhas <zminhas@student.s19.be>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/18 16:30:27 by zminhas           #+#    #+#              #
-#    Updated: 2022/09/23 14:45:17 by zminhas          ###   ########.fr        #
+#    Updated: 2022/10/03 19:12:12 by zminhas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,10 +24,10 @@ OBJS =		$(SRCS:.cpp=.o)
 .cpp.o:
 			$(CXX) $(CXXsFLAGS) -c -I ./ $< -o $(<:.cpp=.o)
 
-all : 		$(NAME)
-
 $(NAME):	$(OBJS)
 			$(CXX) $(CXXsFLAGS) -o $(NAME) $(OBJS)
+
+all : 		$(NAME)
 
 clean:
 			rm -f $(OBJS)
